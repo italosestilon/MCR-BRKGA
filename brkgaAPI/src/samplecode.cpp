@@ -12,8 +12,6 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-	std::vector<double> solutions;
-
 	SampleDecoder decoder = SampleDecoder(argv[1]);			// initialize the decoder
 
 	const unsigned n = decoder.ins.N; // size of chromosomes
@@ -33,7 +31,7 @@ int main(int argc, char* argv[]) {
 	unsigned generation = 0;		// current generation
 	const unsigned X_INTVL = 100;	// exchange best individuals at every 100 generations
 	const unsigned X_NUMBER = 2;	// exchange top 2 best
-	const unsigned MAX_GENS = 1000;	// run for 1000 gens
+	const unsigned MAX_GENS = 100;	// run for 1000 gens
 	do {
 	  std::cout << "Generation " << generation+1 << " of " << MAX_GENS << "\n";
 		algorithm.evolve();	// evolve the population for one generation
@@ -42,7 +40,7 @@ int main(int argc, char* argv[]) {
 			algorithm.exchangeElite(X_NUMBER);	// exchange top individuals
 		}
 
-		solutions.push_back(algorithm.getBestFitness()*-1);
+		cout << algorithm.getBestFitness()*-1 << endl;
 	} while (generation < MAX_GENS);
 
 	std::cout << "Best solution found has objective value = "

@@ -61,9 +61,13 @@ SampleDecoder::SampleDecoder(char * fn) {
   
 	int u, v, w;
 
+	ins.weight.resize(ins.N, 0);
+
   while(infile >> u >> v >> w){
     ins.graph[u][v] = w;
 		ins.graph[v][u] = w;
+		ins.weight[u] += w;
+		ins.weight[v] += w;
   }
 
 	infile.close();
@@ -71,6 +75,31 @@ SampleDecoder::SampleDecoder(char * fn) {
 
 SampleDecoder::~SampleDecoder() { }
 
+std::vector< double > SampleDecoder::greedyConstructiveHeuristic() const{
+	std::vector< double > chromosome;
+	chromosome.resize(ins.N, 0);
+
+	int max[ins.K];
+
+	for(int i=0, c=0; i<ins.K; i++){
+		max[i] = c;
+		for(int j=1; j<ins.clusters[i]; j++){
+			if(ins.weight[c+j] > ins.weight[max[i]]){
+				max[i] = c+j;
+			} 
+		}
+		c += ins.clusters[i];
+	}
+
+
+	for(int i=0; i<ins.K; i++){
+		chromosome[max[i]] = 1;
+	}
+
+	cout << decode(chromosome) << endl;
+
+	return chromosome;
+} 
 
 Sol SampleDecoder::createSolution(const std::vector< double >& chromosome) const{
   Sol sol;
@@ -78,13 +107,13 @@ Sol SampleDecoder::createSolution(const std::vector< double >& chromosome) const
 	sol.vertices.resize(ins.K);
 	
 	for(int i=0, c=0; i<ins.K; i++){
-		sol.vertices[i] = chromosome[c];
+		sol.vertices[i] = c;
 		for(int j=1; j<ins.clusters[i]; j++){
 			if(chromosome[c+j] > chromosome[sol.vertices[i]]){
 				sol.vertices[i] = c+j;
 			} 
 		}
-		c += clusters[i];
+		c += ins.clusters[i];
 	}
 
 	for(int i=0; i<ins.K; i++){
@@ -94,6 +123,8 @@ Sol SampleDecoder::createSolution(const std::vector< double >& chromosome) const
 			sol.value += ins.graph[u][v];
 		}
 	}
+
+	sol.value /= 2;
 
   return sol;
 }

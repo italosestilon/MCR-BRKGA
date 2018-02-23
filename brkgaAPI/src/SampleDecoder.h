@@ -36,6 +36,7 @@ typedef struct instance{
 	std::vector<int> clusters;
   std::string instanceName;
 	std::vector<std::vector<int> > graph;
+	std::vector<int> weight;
 } Instance;
 
 class SampleDecoder {
@@ -46,6 +47,7 @@ public:
 
 	double decode(const std::vector< double >& chromosome) const;
 	void genFileSol(const std::vector< double >& chromosome);
+	std::vector< double > greedyConstructiveHeuristic() const;
 private:
 	Sol createSolution(const std::vector< double >& chromosome) const;
 };

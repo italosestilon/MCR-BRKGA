@@ -256,6 +256,7 @@ inline void BRKGA< Decoder, RNG >::initialize(const unsigned i) {
 		for(unsigned k = 0; k < n; ++k) { (*current[i])(j, k) = refRNG.rand(); }
 	}
 
+
 	(*current[i])(0) = refDecoder.greedyConstructiveHeuristic();
 
 	// Decode:

@@ -12,8 +12,6 @@ int main(int argc, char* argv[]) {
     return 1;
   }
 
-	std::vector<double> solutions;
-
 	SampleDecoder decoder = SampleDecoder(argv[1]);			// initialize the decoder
 
 	const unsigned n = decoder.ins.N; // size of chromosomes
@@ -42,7 +40,7 @@ int main(int argc, char* argv[]) {
 			algorithm.exchangeElite(X_NUMBER);	// exchange top individuals
 		}
 
-		solutions.push_back(algorithm.getBestFitness()*-1);
+		//cout << algorithm.getBestFitness()*-1 << endl;
 	} while (generation < MAX_GENS);
 
 	std::cout << "Best solution found has objective value = "
