@@ -11,7 +11,7 @@ using namespace std;
 
 int weight[MAX_V_NUMBER][MAX_V_NUMBER];
 int group[MAX_V_NUMBER];
-vector<pair<int, int> > w_max;
+vector<int> w_max;
 vector<pair<int, int> > w_vertex;
 vector<int> size;
 int K, N;
@@ -51,18 +51,19 @@ void readFile(char * fn) {
 
   N = 0;
 
-  size = vector<int> (K);
+  size.resize(K);
 
-  w_max.resize(K, make_pair(0,0));
+  w_max.resize(K);
 
-  for(int i=0; i<K; i++){
+  for(int i=0, c=0; i<K; i++){
     infile >> size[i];
     N += size[i];
   }
 
-  w_vertex.resize(N);
+  w_vertex.resize(N, make_pair(0,0));
 
   for(int i = 0; i < N; i++){
+    w_vertex[i].second = i;
     for(int j = 0; j < N; j++){
       weight[i][j] = 0;
     }
@@ -72,32 +73,31 @@ void readFile(char * fn) {
     for(int j=0; j<size[i]; j++){
       group[c + j] = i;
     }
+    w_max[i] = c+i;
     c += size[i];
   }
 
-  int u, v, w, total_w;
+  int u, v, w;
+
+  while(infile >> u >> v >> w){
+    weight[u][v] = w;
+    weight[v][u] = w;
+    w_vertex[u].first += w;
+    w_vertex[v].first += w;
+  }
 
   for(int i=0; i<N; i++){
-    total_w = 0;
-    for(int j=0; j<N; j++){
-      infile >> u >> v >> w;
-      weight[u][v] = w;
-      weight[v][u] = w;
-      total_w += w;
-    }
-
-    w_vertex[i] = make_pair(w, i);
-
-    if(w_max[group[u]].first < total_w){
-      w_max[group[u]].first = total_w;
-      w_max[group[u]].second = u;
+    if(w_vertex[w_max[group[i]]].first < w_vertex[i].first){
+      w_max[group[i]] = i;
     }
   }
 }
 
 void lower_bound(){
+  s_max.clear();
+
   for(int i=0; i<K; i++){
-    s_max.push_back(w_max[i].second);
+    s_max.push_back(w_max[i]);
   }
 
   int size_s = s_max.size();
