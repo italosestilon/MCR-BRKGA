@@ -58,7 +58,7 @@ SampleDecoder::SampleDecoder(char * fn) {
 	for(int i=0; i<ins.N; i++){
 		ins.graph[i].resize(ins.N, 0);
 	}
-  
+
 	int u, v, w;
 
 	ins.weight.resize(ins.N, 0);
@@ -86,7 +86,7 @@ std::vector< double > SampleDecoder::greedyConstructiveHeuristic() const{
 		for(int j=1; j<ins.clusters[i]; j++){
 			if(ins.weight[c+j] > ins.weight[max[i]]){
 				max[i] = c+j;
-			} 
+			}
 		}
 		c += ins.clusters[i];
 	}
@@ -99,19 +99,19 @@ std::vector< double > SampleDecoder::greedyConstructiveHeuristic() const{
 	cout << decode(chromosome)*-1 << endl;
 
 	return chromosome;
-} 
+}
 
 Sol SampleDecoder::createSolution(const std::vector< double >& chromosome) const{
   Sol sol;
 	sol.value = 0;
 	sol.vertices.resize(ins.K);
-	
+
 	for(int i=0, c=0; i<ins.K; i++){
 		sol.vertices[i] = c;
 		for(int j=1; j<ins.clusters[i]; j++){
 			if(chromosome[c+j] > chromosome[sol.vertices[i]]){
 				sol.vertices[i] = c+j;
-			} 
+			}
 		}
 		c += ins.clusters[i];
 	}
@@ -119,7 +119,7 @@ Sol SampleDecoder::createSolution(const std::vector< double >& chromosome) const
 	for(int i=0; i<ins.K; i++){
 		int u = sol.vertices[i];
 		for(int j=0; j<ins.K; j++){
-			int v = sol.vertices[j];			
+			int v = sol.vertices[j];
 			sol.value += ins.graph[u][v];
 		}
 	}
@@ -146,11 +146,24 @@ void SampleDecoder::genFileSol(const std::vector< double >& chromosome){
 
   char* fn = new char[256];
 
-  sprintf(fn, "%s/%s.sol", PATHSOL, ins.instanceName.c_str());
+  sprintf(fn, "%s/%s.sol", "../solutions/", ins.instanceName.c_str());
+
+  int chromo[ins.N];
+
+  for(int i=0; i<ins.N; i++){
+    chromo[i] = 0;
+  }
+
+  for(int i=0, size = sol.vertices.size(); i<size; i++){
+    chromo[sol.vertices[i]] = 1;
+  }
 
   ofstream opf;
   opf.open(fn);
 
+  for(int i=0; i<ins.N; i++){
+    opf << chromo[i] << endl;
+  }
 
   opf.close();
 }

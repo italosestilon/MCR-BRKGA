@@ -93,6 +93,31 @@ void readFile(char * fn) {
   }
 }
 
+void readFileSolution(char * fn){
+  ifstream infile(fn);
+
+  int x;
+  s_max.clear();
+
+  for(int i=0; i<N; i++){
+    infile >> x;
+    if(x){
+      s_max.push_back(i);
+    }
+  }
+
+  int size_s = s_max.size();
+
+  int value = 0;
+  for(int i = 0; i < size_s; i++){
+    for(int j = 0; j < size_s; j++){
+      value += weight[s_max[i]][s_max[j]];
+    }
+  }
+
+  record = value/2;
+}
+
 void lower_bound(){
   s_max.clear();
 
@@ -203,7 +228,7 @@ void branch_and_bound(vector<int> s, vector<int> c){
 
 int main(int argc, char *argv[]){
   if (argc < 2) {
-    cout << "Usage: ./main filename" << endl;
+    cout << "Usage: ./main filename [solution]" << endl;
     return 1;
   }
 
@@ -216,8 +241,12 @@ int main(int argc, char *argv[]){
     c.push_back(w_vertex[i].second);
   }
 
-  lower_bound();
 
+  if(argc > 2){
+    readFileSolution(argv[2]);
+  }else{
+    lower_bound();
+  }
   //SORTING VERTICES
   sort(w_vertex.begin(), w_vertex.end(), greater<pair<int, int> >());
 
