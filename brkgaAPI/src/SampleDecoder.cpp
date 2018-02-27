@@ -118,13 +118,11 @@ Sol SampleDecoder::createSolution(const std::vector< double >& chromosome) const
 
 	for(int i=0; i<ins.K; i++){
 		int u = sol.vertices[i];
-		for(int j=0; j<ins.K; j++){
+		for(int j=i+1; j<ins.K; j++){
 			int v = sol.vertices[j];
 			sol.value += ins.graph[u][v];
 		}
 	}
-
-	sol.value /= 2;
 
   return sol;
 }

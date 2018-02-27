@@ -129,12 +129,12 @@ void lower_bound(){
 
   int value = 0;
   for(int i = 0; i < size_s; i++){
-    for(int j = 0; j < size_s; j++){
+    for(int j = i+1; j < size_s; j++){
       value += weight[s_max[i]][s_max[j]];
     }
   }
 
-  record = value/2;
+  record = value;
 }
 
 int upper_bound(vector<int> s, vector<int> c){
@@ -179,12 +179,12 @@ void branch_and_bound(vector<int> s, vector<int> c){
 
   int value = 0;
   for(int i = 0; i < size_s; i++){
-    for(int j = 0; j < size_s; j++){
+    for(int j = i+1; j < size_s; j++){
       value += weight[s[i]][s[j]];
     }
   }
 
-  value = value/2;
+  value = value;
 
   if(size_s == K){
     if(value > record){
