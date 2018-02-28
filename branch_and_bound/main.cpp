@@ -16,6 +16,7 @@ vector<pair<int, int> > w_vertex;
 vector<int> size;
 int K, N;
 long long int subp = 0;
+long long int maxSubp = 1;
 int timeout;
 double elapsed;
 double lastElapsed;
@@ -62,6 +63,7 @@ void readFile(char * fn) {
   for(int i=0, c=0; i<K; i++){
     infile >> size[i];
     N += size[i];
+    maxSubp *= size[i];
   }
 
   weight.resize(N);
@@ -367,6 +369,10 @@ int main(int argc, char *argv[]){
   for(int i = 0; i < N; i++){
     c.push_back(w_vertex[i].second);
   }
+
+  cout << "K " << K << endl;
+
+  cout << "MAX SUBP " << maxSubp << endl;
 
   cout << "LB " << record << endl;
 
