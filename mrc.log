@@ -1847,3 +1847,34 @@ H    0     0                     274.0000000  779.53498   185%     -   15s
  13112  9000 1245.70857   25 1255  623.00000 1694.22798   172%   736 4408s
  13369  9174  814.80000   41  346  623.00000 1687.15628   171%   733 4455s
  13633  9374 1260.90733   27 1146  623.00000 1679.98766   170%   729 4497s
+
+Gurobi 7.5.2 (linux64, Java) logging started Qui 01 Mar 2018 00:03:31 -03
+
+Academic license - for non-commercial use only
+Optimize a model with 64 rows, 28 columns and 144 nonzeros
+Variable types: 0 continuous, 28 integer (28 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 8e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 42.0000000
+Presolve removed 52 rows and 22 columns
+Presolve time: 0.00s
+Presolved: 12 rows, 6 columns, 28 nonzeros
+Variable types: 0 continuous, 6 integer (6 binary)
+
+Root relaxation: objective 5.400000e+01, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0      54.0000000   54.00000  0.00%     -    0s
+
+Explored 0 nodes (4 simplex iterations) in 0.00 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 54 42 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.400000000000e+01, best bound 5.400000000000e+01, gap 0.0000%
