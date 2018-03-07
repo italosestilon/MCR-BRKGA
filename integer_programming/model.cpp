@@ -1,5 +1,6 @@
 #include "gurobi_c++.h"
 #include<fstream>
+#include<string>
 
 using namespace std;
 
@@ -41,6 +42,16 @@ void readInput(const char* instancePath){
 	}
 
 	instance.close();
+}
+
+void saveResult(vector<GRBVar> X, const char* instancePath){
+	ofstream output;
+	string output_path(instancePath);
+	output_path = "result-"+output_path;
+
+	output.open(output_path.c_str());
+
+	output.close();
 }
 
 double upper_bound_linear_relaxation(vector< vector<int> > m, vector<int> sets, vector<int> partial_solution){
