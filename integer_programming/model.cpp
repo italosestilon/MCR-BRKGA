@@ -1,12 +1,24 @@
 #include "gurobi_c++.h"
 #include<fstream>
 #include<string>
+#include<iterator>
+#include <sstream>
 
 using namespace std;
 
 int c = 3;
 vector< vector<int> > m;
 vector<int> sets;
+
+vector<string> split(const string &s, char delim) {
+    stringstream ss(s);
+    string item;
+    vector<string> tokens;
+    while (getline(ss, item, delim)) {
+        tokens.push_back(item);
+    }
+    return tokens;
+}
 
 void readInput(const char* instancePath){
 
@@ -44,12 +56,28 @@ void readInput(const char* instancePath){
 	instance.close();
 }
 
-void saveResult(vector<GRBVar> X, const char* instancePath){
+void saveResult(vector<GRBVar> X, double bestResult, const char* instancePath){
 	ofstream output;
 	string output_path(instancePath);
-	output_path = "result-"+output_path;
+
+	vector<string> results = split(output_path, '/');
+
+	output_path = results.back();
+	output_path = "result/"+output_path;
 
 	output.open(output_path.c_str());
+
+	if(!output.is_open()){
+		cout << "Ops. Problemas ao abrir o arquivo para escrever. " << output_path << endl;
+
+		return;
+	}
+
+	output << bestResult << endl;
+
+	for(int i = 0; i < X.size(); i++){
+		output << (int)X[i].get(GRB_DoubleAttr_X) << endl;
+	}
 
 	output.close();
 }
@@ -142,7 +170,8 @@ double upper_bound_linear_relaxation(vector< vector<int> > m, vector<int> sets, 
 
 int main(int argsc, char* argsv[]){
 
-	readInput(argsv[1]);
+	const char* instancePath = argsv[1];
+	readInput(instancePath);
 
 	GRBEnv env = GRBEnv();
 
@@ -196,7 +225,10 @@ int main(int argsc, char* argsv[]){
     }
 
     model.setObjective(expr, GRB_MAXIMIZE);
+    model.set(GRB_DoubleParam_TimeLimit, 60*60);
     model.optimize();
+    cout <<  model.get(GRB_DoubleAttr_ObjVal) << endl;
+    saveResult(X,  model.get(GRB_DoubleAttr_ObjVal), instancePath);
 
 	return 0;
 }
