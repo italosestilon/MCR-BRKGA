@@ -58,7 +58,7 @@ for inst in instances:
 		print ("./%s instances/%s.txt > out/%s/%s.out" % (alg, inst, path, inst))
 		os.system("./%s instances/%s.txt > out/%s/%s.out" % (alg, inst, path, inst))
 
-	print ("java -jar MRC-gurobi.jar instances/%s.txt > out/pli/%s.out" % (inst, inst))
-	os.system("java -jar MRC-gurobi.jar instances/%s.txt > out/pli/%s.out" % (inst, inst))
+	#print ("java -jar MRC-gurobi.jar instances/%s.txt > out/pli/%s.out" % (inst, inst))
+	#os.system("java -jar MRC-gurobi.jar instances/%s.txt > out/pli/%s.out" % (inst, inst))
 
 	print("")
