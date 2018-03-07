@@ -5,7 +5,6 @@
 #include <sstream>
 #include <algorithm>
 #include <time.h>
-#include "gurobi_c++.h"
 
 using namespace std;
 
@@ -195,89 +194,6 @@ int upper_bound(vector<int> s, vector<int> c){
   }
 
   return value;
-}
-
-double upper_bound_linear_relaxation(vector<int> s){
-
-	GRBEnv env = GRBEnv();
-
-	GRBModel model = GRBModel(env);
-
-	vector<GRBVar> X;
-
-    for(int i = 0; i < N; i++){
- 		   X.push_back(model.addVar(0.0, 1.0, 0.0, GRB_CONTINUOUS, "x"));
-    }
-
-    vector<vector <GRBVar> > Y (N, vector<GRBVar>(N));
-    for(int i = 0; i < N; i++){
-        for(int j = i+1; j < N; j++) {
-            Y[i][j] = (model.addVar(0.0, 1.0, 0.0, GRB_CONTINUOUS, "y"));
-        }
-    }
-
-    GRBLinExpr expr = 0.0;
-    for(int i = 0; i < N; i++){
-        for(int j = i+1; j < N; j++){
-            expr += weight[i][j] * Y [i][j];
-        }
-    }
-
-
-    //01
-    for(int i = 0; i < N; i++){
-        for(int j = i+1; j < N; j++){
-            if(weight[i][j] == 0) continue;
-            model.addConstr(Y[i][j] <= X[i], "c1");
-            model.addConstr(Y[i][j] <= X[j], "c1-2");
-        }
-    }
-
-
-    //02
-    for(int i = 0; i < N; i++){
-        for(int j = i+1; j < N; j++){
-            if(weight[i][j] == 0) continue;
-            model.addConstr(X[i] + X[j] <= Y[i][j] + 1,"c2");
-        }
-    }
-
-    //03
-    int k = 0;
-    for(int i = 0; i < K; i++){
-        GRBLinExpr expr1 = 0.0;
-        for(int j = 0; j < size[i]; j++, k++){
-            expr1 += X[k];
-        }
-
-        model.addConstr(expr1 <= 1, "c3-s-");
-    }
-
-    //04
-    for(int i = 0; i < N; i++){
-        for(int j = i+1; j < N; j++){
-            if(weight[i][j] != 0) continue;
-            model.addConstr(X[i] + X[j] <= 1, "c3");
-        }
-    }
-
-
-    for(int i = 0; i < s.size(); i++){
-      int index = s[i];
-    	model.addConstr(X[index] == 1, "force");
-    }
-
-    //set variables
-
-    //cout << "running linear relaxation" << endl;
-
-    model.set(GRB_IntParam_OutputFlag, 0);
-    model.setObjective(expr, GRB_MAXIMIZE);
-    model.optimize();
-
-    //cout << "best bound from linear relaxation " << model.get(GRB_DoubleAttr_ObjVal) << endl;
-
-    return model.get(GRB_DoubleAttr_ObjVal);
 }
 
 void branch_and_bound(vector<int> s, vector<int> c, int level){
