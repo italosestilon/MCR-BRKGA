@@ -21,6 +21,7 @@ int timeout;
 double elapsed;
 double lastElapsed;
 clock_t clk;
+string instanceName;
 
 int record = 0;
 vector<int> s_max;
@@ -47,10 +48,38 @@ string getFileName(const string& s) {
    return("");
 }
 
+void genFileSol(){
+
+  char* fn = new char[256];
+
+  sprintf(fn, "%s/%s.sol", "solutions/", instanceName.c_str());
+
+  int chromo[N];
+
+  for(int i=0; i<N; i++){
+    chromo[i] = 0;
+  }
+
+  for(int i=0, size = s_max.size(); i<size; i++){
+    chromo[s_max[i]] = 1;
+  }
+
+  ofstream opf;
+  opf.open(fn);
+
+  opf << record << endl;
+
+  for(int i=0; i<N; i++){
+    opf << chromo[i] << endl;
+  }
+
+  opf.close();
+}
+
 void readFile(char * fn) {
   ifstream infile(fn);
 
-  string instanceName = getFileName(fn);
+  instanceName = getFileName(fn);
 
   infile >> K;
 
@@ -105,23 +134,14 @@ void readFileSolution(char * fn){
   int x;
   s_max.clear();
 
+  infile >> record;
+
   for(int i=0; i<N; i++){
     infile >> x;
     if(x){
       s_max.push_back(i);
     }
   }
-
-  int size_s = s_max.size();
-
-  int value = 0;
-  for(int i = 0; i < size_s; i++){
-    for(int j = i+1; j < size_s; j++){
-      value += weight[s_max[i]][s_max[j]];
-    }
-  }
-
-  record = value;
 }
 
 void lower_bound(){
@@ -290,13 +310,10 @@ void branch_and_bound(vector<int> s, vector<int> c, int level){
 
     cout << endl;
 
+    genFileSol();
+
     exit(1);
   }
-
-  /*if(elapsed - lastElapsed > 5){
-    cout << "solution value: " << record << " | Subp " << subp << fixed << " | Time " << elapsed << "s" << endl;
-    lastElapsed = elapsed;
-  }*/
 
   if(size_s == K){
     if(value > record){
@@ -389,6 +406,7 @@ int main(int argc, char *argv[]){
   cout << "Subp: " << subp << endl;
   cout << fixed << "Time " << elapsed << endl;
 
+  genFileSol();
 
   int size_s = s_max.size();
   for(int i=0; i<size_s; i++){

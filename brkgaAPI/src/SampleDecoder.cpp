@@ -159,6 +159,8 @@ void SampleDecoder::genFileSol(const std::vector< double >& chromosome){
   ofstream opf;
   opf.open(fn);
 
+  opf << result << endl;
+
   for(int i=0; i<ins.N; i++){
     opf << chromo[i] << endl;
   }
