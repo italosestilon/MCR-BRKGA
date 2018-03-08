@@ -1,0 +1,46 @@
+K 30
+MAX SUBP -4207124104588820480
+LB 4697
+UB 258277
+solution value: 4712 | Subp 43 | Time 0.00s
+solution value: 4717 | Subp 271 | Time 0.01s
+solution value: 4729 | Subp 526 | Time 0.01s
+solution value: 4761 | Subp 541 | Time 0.01s
+solution value: 4776 | Subp 25546 | Time 0.03s
+solution value: 4783 | Subp 72845 | Time 0.07s
+solution value: 4793 | Subp 157129 | Time 0.16s
+solution value: 4798 | Subp 1351787 | Time 1.34s
+solution value: 4801 | Subp 3035766 | Time 3.06s
+solution value: 4802 | Subp 3060438 | Time 3.08s
+solution value: 4806 | Subp 3118042 | Time 3.14s
+solution value: 4811 | Subp 3202965 | Time 3.22s
+solution value: 4812 | Subp 3203177 | Time 3.22s
+solution value: 4819 | Subp 3465094 | Time 3.48s
+solution value: 4822 | Subp 3521939 | Time 3.53s
+solution value: 4825 | Subp 7479034 | Time 7.61s
+solution value: 4828 | Subp 7480801 | Time 7.61s
+solution value: 4833 | Subp 7569089 | Time 7.69s
+solution value: 4847 | Subp 38974762 | Time 40.58s
+solution value: 4849 | Subp 39002088 | Time 40.60s
+solution value: 4850 | Subp 39002092 | Time 40.60s
+solution value: 4851 | Subp 42945975 | Time 44.71s
+solution value: 4853 | Subp 42947324 | Time 44.71s
+solution value: 4854 | Subp 43006413 | Time 44.77s
+solution value: 4862 | Subp 43034421 | Time 44.79s
+solution value: 4867 | Subp 43036208 | Time 44.80s
+solution value: 4878 | Subp 43036212 | Time 44.80s
+solution value: 4883 | Subp 120829161 | Time 127.61s
+solution value: 4889 | Subp 120829176 | Time 127.61s
+solution value: 4893 | Subp 542061810 | Time 571.33s
+solution value: 4894 | Subp 542214876 | Time 571.48s
+solution value: 4901 | Subp 542214880 | Time 571.48s
+solution value: 4914 | Subp 1042716920 | Time 1081.49s
+solution value: 4920 | Subp 1046770985 | Time 1085.47s
+solution value: 4923 | Subp 1128983998 | Time 1168.04s
+solution value: 4925 | Subp 1561978860 | Time 1608.02s
+solution value: 4941 | Subp 1561979031 | Time 1608.02s
+solution value: 4945 | Subp 1561980325 | Time 1608.02s
+Record: 4945
+Subp: 3506649401
+Time 3600.00
+15 40 51 101 133 184 209 230 255 297 318 358 395 440 473 490 509 545 584 594 654 661 706 731 784 826 848 852 855 859 

@@ -1,0 +1,12 @@
+K 5
+MAX SUBP 393300
+LB 155
+UB 3670
+solution value: 163 | Subp 7 | Time 0.00s
+solution value: 168 | Subp 26 | Time 0.00s
+solution value: 179 | Subp 44 | Time 0.00s
+solution value: 180 | Subp 19832 | Time 0.02s
+Record: 180
+Subp: 45741
+Time 0.03
+3 19 45 64 78 

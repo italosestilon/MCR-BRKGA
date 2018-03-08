@@ -1,0 +1,34 @@
+K 5
+MAX SUBP 312500000
+LB 129
+UB 11461
+solution value: 147 | Subp 9 | Time 0.00s
+solution value: 151 | Subp 11 | Time 0.00s
+solution value: 155 | Subp 17 | Time 0.00s
+solution value: 156 | Subp 63 | Time 0.00s
+solution value: 157 | Subp 146 | Time 0.00s
+solution value: 158 | Subp 221 | Time 0.00s
+solution value: 160 | Subp 251 | Time 0.00s
+solution value: 161 | Subp 277 | Time 0.00s
+solution value: 162 | Subp 505 | Time 0.00s
+solution value: 163 | Subp 565 | Time 0.00s
+solution value: 164 | Subp 568 | Time 0.00s
+solution value: 165 | Subp 648 | Time 0.00s
+solution value: 168 | Subp 675 | Time 0.00s
+solution value: 174 | Subp 978 | Time 0.00s
+solution value: 176 | Subp 1058 | Time 0.00s
+solution value: 178 | Subp 1082 | Time 0.00s
+solution value: 181 | Subp 1152 | Time 0.00s
+solution value: 182 | Subp 2966 | Time 0.01s
+solution value: 183 | Subp 3023 | Time 0.01s
+solution value: 184 | Subp 24236 | Time 0.05s
+solution value: 185 | Subp 24341 | Time 0.05s
+solution value: 186 | Subp 276914 | Time 0.57s
+solution value: 187 | Subp 276978 | Time 0.57s
+solution value: 188 | Subp 278152 | Time 0.57s
+solution value: 190 | Subp 329197 | Time 0.67s
+solution value: 191 | Subp 524733 | Time 1.07s
+Record: 191
+Subp: 6378551
+Time 12.99
+21 59 111 153 243 

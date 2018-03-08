@@ -1,0 +1,20 @@
+K 5
+MAX SUBP 7604352
+LB 129
+UB 6739
+solution value: 132 | Subp 7 | Time 0.00s
+solution value: 152 | Subp 16 | Time 0.00s
+solution value: 156 | Subp 93 | Time 0.00s
+solution value: 157 | Subp 143 | Time 0.00s
+solution value: 159 | Subp 156 | Time 0.00s
+solution value: 163 | Subp 247 | Time 0.00s
+solution value: 164 | Subp 1682 | Time 0.00s
+solution value: 168 | Subp 1713 | Time 0.00s
+solution value: 170 | Subp 1815 | Time 0.00s
+solution value: 174 | Subp 3651 | Time 0.01s
+solution value: 176 | Subp 17315 | Time 0.03s
+solution value: 178 | Subp 164962 | Time 0.24s
+Record: 178
+Subp: 227891
+Time 0.33
+26 46 95 112 150 

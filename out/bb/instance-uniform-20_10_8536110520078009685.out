@@ -1,0 +1,26 @@
+K 20
+MAX SUBP 585252864000000
+LB 2322
+UB 25616
+solution value: 2404 | Subp 62 | Time 0.00s
+solution value: 2414 | Subp 78 | Time 0.00s
+solution value: 2432 | Subp 4748 | Time 0.01s
+solution value: 2441 | Subp 6494 | Time 0.01s
+solution value: 2444 | Subp 14106 | Time 0.02s
+solution value: 2446 | Subp 15726 | Time 0.02s
+solution value: 2470 | Subp 35858 | Time 0.03s
+solution value: 2479 | Subp 37463 | Time 0.03s
+solution value: 2480 | Subp 37468 | Time 0.03s
+solution value: 2484 | Subp 78655 | Time 0.06s
+solution value: 2493 | Subp 78676 | Time 0.06s
+solution value: 2496 | Subp 15916099 | Time 10.16s
+solution value: 2502 | Subp 15916104 | Time 10.16s
+solution value: 2511 | Subp 15958583 | Time 10.19s
+solution value: 2513 | Subp 17199850 | Time 10.98s
+solution value: 2521 | Subp 302321711 | Time 194.17s
+solution value: 2524 | Subp 2174092455 | Time 1402.75s
+solution value: 2528 | Subp 2432034106 | Time 1570.71s
+Record: 2528
+Subp: 5524992999
+Time 3600.00
+2 8 13 16 21 25 32 41 48 52 56 63 72 82 84 96 101 104 112 118 
