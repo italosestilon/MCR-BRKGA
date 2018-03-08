@@ -144,7 +144,7 @@ void SampleDecoder::genFileSol(const std::vector< double >& chromosome){
 
   char* fn = new char[256];
 
-  sprintf(fn, "%s/%s.sol", "../solutions/", ins.instanceName.c_str());
+  sprintf(fn, "%s/%s.sol", PATHSOL, ins.instanceName.c_str());
 
   int chromo[ins.N];
 
