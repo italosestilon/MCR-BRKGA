@@ -42,11 +42,11 @@ instances = [
 
 algorithms = [
 	("brkgaAPI/src/samplecode", "brkga"),
-	("branch_and_bound/main", "bb")
+	("BB/main", "bb")
 ];
 
 print ("make BB")
-os.system("cd branch_and_bound && make")
+os.system("cd BB && make")
 os.system("cd ..")
 
 print ("make brkga")
@@ -55,8 +55,8 @@ os.system("cd brkgaAPI/src && make")
 
 for inst in instances:
 	for (alg, path) in algorithms:
-		print ("./%s instances/%s.txt > out/%s/%s.out" % (alg, inst, path, inst))
-		os.system("./%s instances/%s.txt > out/%s/%s.out" % (alg, inst, path, inst))
+		print ("./%s instances/%s.txt brkgaAPI/solutions/%s.sol > out/%s/%s.out" % (alg, inst, inst, path, inst))
+		os.system("./%s instances/%s.txt brkgaAPI/solutions/%s.sol > out/%s/%s.out" % (alg, inst, inst, path, inst))
 
 	#print ("java -jar MRC-gurobi.jar instances/%s.txt > out/pli/%s.out" % (inst, inst))
 	#os.system("java -jar MRC-gurobi.jar instances/%s.txt > out/pli/%s.out" % (inst, inst))
