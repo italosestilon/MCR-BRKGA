@@ -15,6 +15,7 @@ vector<pair<int, int> > w_vertex;
 vector<int> min_w;
 vector<int> size;
 vector<vector<int> > max_edge;
+vector<vector<int> > maximum_edges_vertex_per_cluster;
 int K, N;
 long long int subp = 0;
 long long int maxSubp = 1;
@@ -53,7 +54,7 @@ void genFileSol(){
 
   char* fn = new char[256];
 
-  sprintf(fn, "%s/%s.sol", "BB/solutions/", instanceName.c_str());
+  sprintf(fn, "%s/%s.txt", "BB/solutions/", instanceName.c_str());
 
   int chromo[N];
 
@@ -103,6 +104,8 @@ void readFile(char * fn) {
     max_edge[i][i] = 0;
   }
 
+
+  maximum_edges_vertex_per_cluster.resize(N);
   weight.resize(N);
   sets.resize(N);
   w_vertex.resize(N, make_pair(0,0));
@@ -110,6 +113,7 @@ void readFile(char * fn) {
   for(int i = 0; i < N; i++){
     w_vertex[i].second = i;
     weight[i].resize(N, 0);
+    maximum_edges_vertex_per_cluster[i].resize(K, 0);
   }
 
   for(int i=0, c=0; i<K; i++){
@@ -135,6 +139,14 @@ void readFile(char * fn) {
       min_w[sets[v]] = w;
     }
 
+    if(w > maximum_edges_vertex_per_cluster[u][sets[v]]){
+      maximum_edges_vertex_per_cluster[u][sets[v]] = w;
+    }
+
+    if(w > maximum_edges_vertex_per_cluster[v][sets[u]]){
+      maximum_edges_vertex_per_cluster[v][sets[u]] = w;
+    }
+
     if(w > max_edge[sets[u]][sets[v]] && sets[u] != sets[v]){
       max_edge[sets[u]][sets[v]] = max_edge[sets[v]][sets[u]] = w;
     }
@@ -153,7 +165,12 @@ void readFileSolution(char * fn){
   int x;
   s_max.clear();
 
+
   infile >> record;
+
+  cout << fn << endl;
+
+  cout << record << endl;
 
   for(int i=0; i<N; i++){
     infile >> x;
@@ -182,8 +199,7 @@ void lower_bound(){
   record = value;
 }
 
-int upper_bound(vector<int> s, vector<int> c, int level){
-  int size_c = c.size();
+int upper_bound(vector<int> s, int level){
   int size_s = s.size();
 
   int value = 0;
@@ -194,24 +210,10 @@ int upper_bound(vector<int> s, vector<int> c, int level){
     }
   }
 
-  int count = 0;
-
-  for(int i=0; i<level; i++){
-    count += size[i];
-  }
-
   for(int i = 0; i < size_s; i++){
     int index = s[i];
-    for(int j = level, count2 = count; j < K; j++){
-      int max = 0;
-      for(int k = 0; k < size[j]; k++){
-        if(weight[index][count2+k] > max){
-          max = weight[index][count2+k];
-        }
-      }
-
-      value += max;
-      count2 += size[j];
+    for(int j = level; j < K; j++){
+      value += maximum_edges_vertex_per_cluster[index][j];
     }
   }
 
@@ -267,7 +269,7 @@ void branch_and_bound(vector<int> s, vector<int> c, int level){
     return;
   }
 
-  int ub = upper_bound(s, c, level) + value;
+  int ub = upper_bound(s, level) + value;
 
   //cout << ub << endl;
 
@@ -333,7 +335,7 @@ int main(int argc, char *argv[]){
 
   cout << "LB " << record << endl;
 
-  int ub = upper_bound(s, c, 0);
+  int ub = upper_bound(s, 0);
 
   cout << "UB " << ub << endl;
 
