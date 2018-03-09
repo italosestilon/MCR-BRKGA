@@ -225,7 +225,7 @@ int main(int argsc, char* argsv[]){
     }
 
     model.setObjective(expr, GRB_MAXIMIZE);
-    model.set(GRB_DoubleParam_TimeLimit, 60*60);
+    model.set(GRB_DoubleParam_TimeLimit, 60.0*60.0);
     model.optimize();
     cout <<  model.get(GRB_DoubleAttr_ObjVal) << endl;
     saveResult(X,  model.get(GRB_DoubleAttr_ObjVal), instancePath);
