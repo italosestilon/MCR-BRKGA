@@ -12,7 +12,9 @@ vector<vector<int> > weight;
 vector<int> sets;
 vector<int> w_max;
 vector<pair<int, int> > w_vertex;
+vector<int> min_w;
 vector<int> size;
+vector<vector<int> > max_edge;
 int K, N;
 long long int subp = 0;
 long long int maxSubp = 1;
@@ -88,10 +90,17 @@ void readFile(char * fn) {
 
   w_max.resize(K);
 
+  min_w.resize(K);
+
+  max_edge.resize(K);
+
   for(int i=0, c=0; i<K; i++){
     infile >> size[i];
     N += size[i];
     maxSubp *= size[i];
+    min_w[i] = 100000;
+    max_edge[i].resize(K, 0);
+    max_edge[i][i] = 0;
   }
 
   weight.resize(N);
@@ -114,10 +123,21 @@ void readFile(char * fn) {
   int u, v, w;
 
   while(infile >> u >> v >> w){
-    weight[u][v] = w;
-    weight[v][u] = w;
+    weight[u][v] = weight[v][u] = w;
     w_vertex[u].first += w;
     w_vertex[v].first += w;
+
+    if(w > 0 && w < min_w[sets[u]]){
+      min_w[sets[u]] = w;
+    }
+
+    if(w > 0 && w < min_w[sets[v]]){
+      min_w[sets[v]] = w;
+    }
+
+    if(w > max_edge[sets[u]][sets[v]] && sets[u] != sets[v]){
+      max_edge[sets[u]][sets[v]] = max_edge[sets[v]][sets[u]] = w;
+    }
   }
 
   for(int i=0; i<N; i++){
@@ -162,35 +182,37 @@ void lower_bound(){
   record = value;
 }
 
-int upper_bound(vector<int> s, vector<int> c){
+int upper_bound(vector<int> s, vector<int> c, int level){
   int size_c = c.size();
   int size_s = s.size();
 
-  int sets_UB[K];
-
-  for(int i = 0; i < K; i++){
-    sets_UB[i] = 0;
-  }
-
-  for(int i = 0; i < size_c; i++){
-    int w = 0;
-    for(int j = 0; j < size_c; j++){
-      w += weight[c[i]][c[j]];
-    }
-
-    for(int j = 0; j < size_s; j++){
-      w += weight[c[i]][s[j]];
-    }
-
-    if(sets_UB[sets[c[i]]] < w){
-      sets_UB[sets[c[i]]] = w;
-    }
-  }
-
   int value = 0;
 
-  for(int i = 0; i < K; i++){
-    value += sets_UB[i];
+  for(int i = level; i < K; i++){
+    for(int j=i+1; j < K; j++){
+      value += max_edge[i][j];
+    }
+  }
+
+  int count = 0;
+
+  for(int i=0; i<level; i++){
+    count += size[i];
+  }
+
+  for(int i = 0; i < size_s; i++){
+    int index = s[i];
+    for(int j = level, count2 = count; j < K; j++){
+      int max = 0;
+      for(int k = 0; k < size[j]; k++){
+        if(weight[index][count2+k] > max){
+          max = weight[index][count2+k];
+        }
+      }
+
+      value += max;
+      count2 += size[j];
+    }
   }
 
   return value;
@@ -245,7 +267,9 @@ void branch_and_bound(vector<int> s, vector<int> c, int level){
     return;
   }
 
-  int ub = upper_bound(s, c) + value;
+  int ub = upper_bound(s, c, level) + value;
+
+  //cout << ub << endl;
 
   if(ub <= record){
     return;
@@ -309,7 +333,7 @@ int main(int argc, char *argv[]){
 
   cout << "LB " << record << endl;
 
-  int ub = upper_bound(s, c);
+  int ub = upper_bound(s, c, 0);
 
   cout << "UB " << ub << endl;
 
