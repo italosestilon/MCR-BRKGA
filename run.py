@@ -2,7 +2,7 @@ import os
 
 instances = [
 	"instance-normal-10_10_6528567610788970942.txt",
-	"instance-normal-10_30_400562113371764257.txt"
+	"instance-normal-10_30_400562113371764257.txt",
 	"instance-normal-10_50_8868171147548326926.txt",
 	"instance-normal-20_10_6328278962814994927.txt",
 	"instance-normal-20_30_8862008393618559334.txt",
@@ -45,12 +45,12 @@ algorithms = [
 	("BB/main", "bb")
 ];
 
-print ("make BB")
-os.system("cd BB && make")
-os.system("cd ..")
+#print ("make BB")
+#os.system("cd BB && make")
+#os.system("cd ..")
 
-print ("make brkga")
-os.system("cd brkgaAPI/src && make")
+#print ("make brkga")
+#os.system("cd brkgaAPI/src && make")
 
 
 for inst in instances:
