@@ -12,7 +12,10 @@ vector<vector<int> > weight;
 vector<int> sets;
 vector<int> w_max;
 vector<pair<int, int> > w_vertex;
+vector<int> min_w;
 vector<int> size;
+vector<vector<int> > max_edge;
+vector<vector<int> > maximum_edges_vertex_per_cluster;
 int K, N;
 long long int subp = 0;
 long long int maxSubp = 1;
@@ -51,7 +54,7 @@ void genFileSol(){
 
   char* fn = new char[256];
 
-  sprintf(fn, "%s/%s.sol", "BB/solutions/", instanceName.c_str());
+  sprintf(fn, "%s/%s.txt", "BB/solutions/", instanceName.c_str());
 
   int chromo[N];
 
@@ -88,12 +91,21 @@ void readFile(char * fn) {
 
   w_max.resize(K);
 
+  min_w.resize(K);
+
+  max_edge.resize(K);
+
   for(int i=0, c=0; i<K; i++){
     infile >> size[i];
     N += size[i];
     maxSubp *= size[i];
+    min_w[i] = 100000;
+    max_edge[i].resize(K, 0);
+    max_edge[i][i] = 0;
   }
 
+
+  maximum_edges_vertex_per_cluster.resize(N);
   weight.resize(N);
   sets.resize(N);
   w_vertex.resize(N, make_pair(0,0));
@@ -101,6 +113,7 @@ void readFile(char * fn) {
   for(int i = 0; i < N; i++){
     w_vertex[i].second = i;
     weight[i].resize(N, 0);
+    maximum_edges_vertex_per_cluster[i].resize(K, 0);
   }
 
   for(int i=0, c=0; i<K; i++){
@@ -114,10 +127,29 @@ void readFile(char * fn) {
   int u, v, w;
 
   while(infile >> u >> v >> w){
-    weight[u][v] = w;
-    weight[v][u] = w;
+    weight[u][v] = weight[v][u] = w;
     w_vertex[u].first += w;
     w_vertex[v].first += w;
+
+    if(w > 0 && w < min_w[sets[u]]){
+      min_w[sets[u]] = w;
+    }
+
+    if(w > 0 && w < min_w[sets[v]]){
+      min_w[sets[v]] = w;
+    }
+
+    if(w > maximum_edges_vertex_per_cluster[u][sets[v]]){
+      maximum_edges_vertex_per_cluster[u][sets[v]] = w;
+    }
+
+    if(w > maximum_edges_vertex_per_cluster[v][sets[u]]){
+      maximum_edges_vertex_per_cluster[v][sets[u]] = w;
+    }
+
+    if(w > max_edge[sets[u]][sets[v]] && sets[u] != sets[v]){
+      max_edge[sets[u]][sets[v]] = max_edge[sets[v]][sets[u]] = w;
+    }
   }
 
   for(int i=0; i<N; i++){
@@ -133,7 +165,12 @@ void readFileSolution(char * fn){
   int x;
   s_max.clear();
 
+
   infile >> record;
+
+  cout << fn << endl;
+
+  cout << record << endl;
 
   for(int i=0; i<N; i++){
     infile >> x;
@@ -162,35 +199,22 @@ void lower_bound(){
   record = value;
 }
 
-int upper_bound(vector<int> s, vector<int> c){
-  int size_c = c.size();
+int upper_bound(vector<int> s, int level){
   int size_s = s.size();
-
-  int sets_UB[K];
-
-  for(int i = 0; i < K; i++){
-    sets_UB[i] = 0;
-  }
-
-  for(int i = 0; i < size_c; i++){
-    int w = 0;
-    for(int j = 0; j < size_c; j++){
-      w += weight[c[i]][c[j]];
-    }
-
-    for(int j = 0; j < size_s; j++){
-      w += weight[c[i]][s[j]];
-    }
-
-    if(sets_UB[sets[c[i]]] < w){
-      sets_UB[sets[c[i]]] = w;
-    }
-  }
 
   int value = 0;
 
-  for(int i = 0; i < K; i++){
-    value += sets_UB[i];
+  for(int i = level; i < K; i++){
+    for(int j=i+1; j < K; j++){
+      value += max_edge[i][j];
+    }
+  }
+
+  for(int i = 0; i < size_s; i++){
+    int index = s[i];
+    for(int j = level; j < K; j++){
+      value += maximum_edges_vertex_per_cluster[index][j];
+    }
   }
 
   return value;
@@ -245,7 +269,9 @@ void branch_and_bound(vector<int> s, vector<int> c, int level){
     return;
   }
 
-  int ub = upper_bound(s, c) + value;
+  int ub = upper_bound(s, level) + value;
+
+  //cout << ub << endl;
 
   if(ub <= record){
     return;
@@ -309,7 +335,7 @@ int main(int argc, char *argv[]){
 
   cout << "LB " << record << endl;
 
-  int ub = upper_bound(s, c);
+  int ub = upper_bound(s, 0);
 
   cout << "UB " << ub << endl;
 

@@ -3,7 +3,9 @@ export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 export GRB_LICENSE_FILE="$HOME/gurobi.lic"
 
+rm -rf result
 mkdir result
+
 for file in ../instances/*.txt; do
 	printf "$file \n"
 	./model $file
