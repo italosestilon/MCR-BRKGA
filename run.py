@@ -60,7 +60,7 @@ for inst in instances:
 	print ("BB %s" % (inst))
 	os.system("./BB/main instances/%s > out/bb/%s.out" % (inst, inst))
 
-	print ("BB-brkga" % (inst))
+	print ("BB-brkga %s" % (inst))
 	os.system("./BB/main instances/%s brkgaAPI/solutions/%s > out/bb_brkga/%s.out" % (inst, inst, inst))
 
 	print("")
