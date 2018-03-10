@@ -10,10 +10,10 @@ CCFLAGS = -O3 $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR) $(SYSTEMCCFLAGS) -fop
 all: clean main
 
 main: $(OBJECTS)
-	$(CPP) $(CFLAGS) $(OBJECTS) -o main -I${GUROBI_HOME}/include -L${GUROBI_HOME}/lib -lgurobi_c++ -lgurobi75
+	$(CPP) $(CFLAGS) $(OBJECTS) -o main 
 
 main.o:
-	$(CPP) $(CFLAGS) -c main.cpp -I${GUROBI_HOME}/include -L${GUROBI_HOME}/lib -lgurobi_c++ -lgurobi75
+	$(CPP) $(CFLAGS) -c main.cpp
 
 # Remove:
 clean:
