@@ -51,7 +51,7 @@ os.system("cd out && mkdir -p bb_brkga")
 os.system("cd out && mkdir -p pli")
 
 
-for inst in []:
+for inst in instances:
 	print ("brkga %s" % (inst))
 	os.system("./brkgaAPI/src/samplecode instances/%s > out/brkga/%s.out" % (inst, inst))
 
