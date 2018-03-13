@@ -40,18 +40,6 @@ instances = [
 
 ];
 
-algorithms = [
-	("brkgaAPI/src/samplecode", "brkga"),
-	("BB/main", "bb")
-];
-
-#print ("make BB")
-#os.system("cd BB && make")
-#os.system("cd ..")
-
-#print ("make brkga")
-#os.system("cd brkgaAPI/src && make")
-
 
 for inst in instances:
 	print ("brkga %s" % (inst))
@@ -61,6 +49,6 @@ for inst in instances:
 	os.system("./BB/main instances/%s > out/bb/%s.out" % (inst, inst))
 
 	print ("BB-brkga %s" % (inst))
-	os.system("./BB/main instances/%s brkgaAPI/solutions/%s > out/bb_brkga/%s.out" % (inst, inst, inst))
+	os.system("./BB2/main instances/%s brkgaAPI/solutions/%s > out/bb_brkga/%s.out" % (inst, inst, inst))
 
 	print("")
