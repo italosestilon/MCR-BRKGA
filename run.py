@@ -40,6 +40,12 @@ instances = [
 
 ];
 
+os.system("mkdir -p out")
+os.system("cd out && mkdir -p brkga")
+os.system("cd out && mkdir -p bb")
+os.system("cd out && mkdir -p bb_brkga")
+os.system("cd out && mkdir -p pli")
+
 
 for inst in instances:
 	print ("brkga %s" % (inst))
