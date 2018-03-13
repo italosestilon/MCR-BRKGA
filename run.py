@@ -40,6 +40,10 @@ instances = [
 
 ];
 
+os.system("cd BB && mkdir -p solutions")
+os.system("cd BB2 && mkdir -p solutions")
+os.system("cd brkgaAPI && mkdir -p solutions")
+
 os.system("mkdir -p out")
 os.system("cd out && mkdir -p brkga")
 os.system("cd out && mkdir -p bb")
@@ -47,7 +51,7 @@ os.system("cd out && mkdir -p bb_brkga")
 os.system("cd out && mkdir -p pli")
 
 
-for inst in instances:
+for inst in []:
 	print ("brkga %s" % (inst))
 	os.system("./brkgaAPI/src/samplecode instances/%s > out/brkga/%s.out" % (inst, inst))
 
