@@ -1,113 +1,144 @@
-make BB
-make brkga
-./brkgaAPI/src/samplecode instances/instance-normal-10_10_9069566213990078274.txt > out/brkga/instance-normal-10_10_9069566213990078274.out
-./branch_and_bound/main instances/instance-normal-10_10_9069566213990078274.txt > out/bb/instance-normal-10_10_9069566213990078274.out
+brkga instance-normal-10_10_6528567610788970942.txt
+BB instance-normal-10_10_6528567610788970942.txt
+BB-brkga instance-normal-10_10_6528567610788970942.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-10_30_5101836430196424830.txt > out/brkga/instance-normal-10_30_5101836430196424830.out
-./branch_and_bound/main instances/instance-normal-10_30_5101836430196424830.txt > out/bb/instance-normal-10_30_5101836430196424830.out
+brkga instance-normal-10_30_400562113371764257.txt
+BB instance-normal-10_30_400562113371764257.txt
+BB-brkga instance-normal-10_30_400562113371764257.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-10_50_1299250510484383223.txt > out/brkga/instance-normal-10_50_1299250510484383223.out
-./branch_and_bound/main instances/instance-normal-10_50_1299250510484383223.txt > out/bb/instance-normal-10_50_1299250510484383223.out
+brkga instance-normal-10_50_8868171147548326926.txt
+BB instance-normal-10_50_8868171147548326926.txt
+BB-brkga instance-normal-10_50_8868171147548326926.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-20_10_4353139248543192163.txt > out/brkga/instance-normal-20_10_4353139248543192163.out
-./branch_and_bound/main instances/instance-normal-20_10_4353139248543192163.txt > out/bb/instance-normal-20_10_4353139248543192163.out
+brkga instance-normal-20_10_6328278962814994927.txt
+BB instance-normal-20_10_6328278962814994927.txt
+BB-brkga instance-normal-20_10_6328278962814994927.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-20_30_8142950210851029772.txt > out/brkga/instance-normal-20_30_8142950210851029772.out
-./branch_and_bound/main instances/instance-normal-20_30_8142950210851029772.txt > out/bb/instance-normal-20_30_8142950210851029772.out
+brkga instance-normal-20_30_8862008393618559334.txt
+BB instance-normal-20_30_8862008393618559334.txt
+BB-brkga instance-normal-20_30_8862008393618559334.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-20_50_4342701307052564344.txt > out/brkga/instance-normal-20_50_4342701307052564344.out
-./branch_and_bound/main instances/instance-normal-20_50_4342701307052564344.txt > out/bb/instance-normal-20_50_4342701307052564344.out
+brkga instance-normal-20_50_3638527140661504545.txt
+BB instance-normal-20_50_3638527140661504545.txt
+BB-brkga instance-normal-20_50_3638527140661504545.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-30_10_1312402075301207550.txt > out/brkga/instance-normal-30_10_1312402075301207550.out
-./branch_and_bound/main instances/instance-normal-30_10_1312402075301207550.txt > out/bb/instance-normal-30_10_1312402075301207550.out
+brkga instance-normal-30_10_5584669284027276941.txt
+BB instance-normal-30_10_5584669284027276941.txt
+BB-brkga instance-normal-30_10_5584669284027276941.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-30_30_2156813194944348711.txt > out/brkga/instance-normal-30_30_2156813194944348711.out
-./branch_and_bound/main instances/instance-normal-30_30_2156813194944348711.txt > out/bb/instance-normal-30_30_2156813194944348711.out
+brkga instance-normal-30_30_819562567068417602.txt
+BB instance-normal-30_30_819562567068417602.txt
+BB-brkga instance-normal-30_30_819562567068417602.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-30_50_8505631669847462694.txt > out/brkga/instance-normal-30_50_8505631669847462694.out
-./branch_and_bound/main instances/instance-normal-30_50_8505631669847462694.txt > out/bb/instance-normal-30_50_8505631669847462694.out
+brkga instance-normal-30_50_8495668216942044676.txt
+BB instance-normal-30_50_8495668216942044676.txt
+BB-brkga instance-normal-30_50_8495668216942044676.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-5_10_11189796138897731.txt > out/brkga/instance-normal-5_10_11189796138897731.out
-./branch_and_bound/main instances/instance-normal-5_10_11189796138897731.txt > out/bb/instance-normal-5_10_11189796138897731.out
+brkga instance-normal-5_10_1556037329065896909.txt
+BB instance-normal-5_10_1556037329065896909.txt
+BB-brkga instance-normal-5_10_1556037329065896909.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-5_30_203679956587613087.txt > out/brkga/instance-normal-5_30_203679956587613087.out
-./branch_and_bound/main instances/instance-normal-5_30_203679956587613087.txt > out/bb/instance-normal-5_30_203679956587613087.out
+brkga instance-normal-5_30_3915474638750880997.txt
+BB instance-normal-5_30_3915474638750880997.txt
+BB-brkga instance-normal-5_30_3915474638750880997.txt
 
-./brkgaAPI/src/samplecode instances/instance-normal-5_50_2272890002882406950.txt > out/brkga/instance-normal-5_50_2272890002882406950.out
-./branch_and_bound/main instances/instance-normal-5_50_2272890002882406950.txt > out/bb/instance-normal-5_50_2272890002882406950.out
+brkga instance-normal-5_50_5645167529901746724.txt
+BB instance-normal-5_50_5645167529901746724.txt
+BB-brkga instance-normal-5_50_5645167529901746724.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-10_10_4101995495510533711.txt > out/brkga/instance-similar-10_10_4101995495510533711.out
-./branch_and_bound/main instances/instance-similar-10_10_4101995495510533711.txt > out/bb/instance-similar-10_10_4101995495510533711.out
+brkga instance-similar-10_10_1620148828828682729.txt
+BB instance-similar-10_10_1620148828828682729.txt
+BB-brkga instance-similar-10_10_1620148828828682729.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-10_10_4484439307827160459.txt > out/brkga/instance-similar-10_10_4484439307827160459.out
-./branch_and_bound/main instances/instance-similar-10_10_4484439307827160459.txt > out/bb/instance-similar-10_10_4484439307827160459.out
+brkga instance-similar-10_30_7340918304851233631.txt
+BB instance-similar-10_30_7340918304851233631.txt
+BB-brkga instance-similar-10_30_7340918304851233631.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-10_30_8289865501567529889.txt > out/brkga/instance-similar-10_30_8289865501567529889.out
-./branch_and_bound/main instances/instance-similar-10_30_8289865501567529889.txt > out/bb/instance-similar-10_30_8289865501567529889.out
+brkga instance-similar-10_50_1399345011251712154.txt
+BB instance-similar-10_50_1399345011251712154.txt
+BB-brkga instance-similar-10_50_1399345011251712154.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-10_50_2990018272429598429.txt > out/brkga/instance-similar-10_50_2990018272429598429.out
-./branch_and_bound/main instances/instance-similar-10_50_2990018272429598429.txt > out/bb/instance-similar-10_50_2990018272429598429.out
+brkga instance-similar-20_10_6246196465249217373.txt
+BB instance-similar-20_10_6246196465249217373.txt
+BB-brkga instance-similar-20_10_6246196465249217373.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-20_10_1160072664559416098.txt > out/brkga/instance-similar-20_10_1160072664559416098.out
-./branch_and_bound/main instances/instance-similar-20_10_1160072664559416098.txt > out/bb/instance-similar-20_10_1160072664559416098.out
+brkga instance-similar-20_30_7534284746474750159.txt
+BB instance-similar-20_30_7534284746474750159.txt
+BB-brkga instance-similar-20_30_7534284746474750159.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-20_30_5754620931927865713.txt > out/brkga/instance-similar-20_30_5754620931927865713.out
-./branch_and_bound/main instances/instance-similar-20_30_5754620931927865713.txt > out/bb/instance-similar-20_30_5754620931927865713.out
+brkga instance-similar-20_50_3590046920785578041.txt
+BB instance-similar-20_50_3590046920785578041.txt
+BB-brkga instance-similar-20_50_3590046920785578041.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-20_50_5986155739858567165.txt > out/brkga/instance-similar-20_50_5986155739858567165.out
-./branch_and_bound/main instances/instance-similar-20_50_5986155739858567165.txt > out/bb/instance-similar-20_50_5986155739858567165.out
+brkga instance-similar-30_10_4083237986323606591.txt
+BB instance-similar-30_10_4083237986323606591.txt
+BB-brkga instance-similar-30_10_4083237986323606591.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-30_10_198943839508865483.txt > out/brkga/instance-similar-30_10_198943839508865483.out
-./branch_and_bound/main instances/instance-similar-30_10_198943839508865483.txt > out/bb/instance-similar-30_10_198943839508865483.out
+brkga instance-similar-30_30_8100326382418160103.txt
+BB instance-similar-30_30_8100326382418160103.txt
+BB-brkga instance-similar-30_30_8100326382418160103.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-30_30_3109307287878925889.txt > out/brkga/instance-similar-30_30_3109307287878925889.out
-./branch_and_bound/main instances/instance-similar-30_30_3109307287878925889.txt > out/bb/instance-similar-30_30_3109307287878925889.out
+brkga instance-similar-30_50_1331763098226818453.txt
+BB instance-similar-30_50_1331763098226818453.txt
+BB-brkga instance-similar-30_50_1331763098226818453.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-30_50_7740251636409470100.txt > out/brkga/instance-similar-30_50_7740251636409470100.out
-./branch_and_bound/main instances/instance-similar-30_50_7740251636409470100.txt > out/bb/instance-similar-30_50_7740251636409470100.out
+brkga instance-similar-5_10_211504906417112605.txt
+BB instance-similar-5_10_211504906417112605.txt
+BB-brkga instance-similar-5_10_211504906417112605.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-5_10_7700278471317325539.txt > out/brkga/instance-similar-5_10_7700278471317325539.out
-./branch_and_bound/main instances/instance-similar-5_10_7700278471317325539.txt > out/bb/instance-similar-5_10_7700278471317325539.out
+brkga instance-similar-5_30_8004114527165865034.txt
+BB instance-similar-5_30_8004114527165865034.txt
+BB-brkga instance-similar-5_30_8004114527165865034.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-5_30_541915693750959009.txt > out/brkga/instance-similar-5_30_541915693750959009.out
-./branch_and_bound/main instances/instance-similar-5_30_541915693750959009.txt > out/bb/instance-similar-5_30_541915693750959009.out
+brkga instance-similar-5_50_7285937797532987407.txt
+BB instance-similar-5_50_7285937797532987407.txt
+BB-brkga instance-similar-5_50_7285937797532987407.txt
 
-./brkgaAPI/src/samplecode instances/instance-similar-5_50_3911772527774523819.txt > out/brkga/instance-similar-5_50_3911772527774523819.out
-./branch_and_bound/main instances/instance-similar-5_50_3911772527774523819.txt > out/bb/instance-similar-5_50_3911772527774523819.out
+brkga instance-uniform-10_10_186296902021270023.txt
+BB instance-uniform-10_10_186296902021270023.txt
+BB-brkga instance-uniform-10_10_186296902021270023.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-10_10_7154584347338134297.txt > out/brkga/instance-uniform-10_10_7154584347338134297.out
-./branch_and_bound/main instances/instance-uniform-10_10_7154584347338134297.txt > out/bb/instance-uniform-10_10_7154584347338134297.out
+brkga instance-uniform-10_30_996401170637413420.txt
+BB instance-uniform-10_30_996401170637413420.txt
+BB-brkga instance-uniform-10_30_996401170637413420.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-10_30_1746359552420434941.txt > out/brkga/instance-uniform-10_30_1746359552420434941.out
-./branch_and_bound/main instances/instance-uniform-10_30_1746359552420434941.txt > out/bb/instance-uniform-10_30_1746359552420434941.out
+brkga instance-uniform-10_50_6620044706615721902.txt
+BB instance-uniform-10_50_6620044706615721902.txt
+BB-brkga instance-uniform-10_50_6620044706615721902.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-10_50_5193192146419259819.txt > out/brkga/instance-uniform-10_50_5193192146419259819.out
-./branch_and_bound/main instances/instance-uniform-10_50_5193192146419259819.txt > out/bb/instance-uniform-10_50_5193192146419259819.out
+brkga instance-uniform-20_10_8497498977251904170.txt
+BB instance-uniform-20_10_8497498977251904170.txt
+BB-brkga instance-uniform-20_10_8497498977251904170.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-20_10_8536110520078009685.txt > out/brkga/instance-uniform-20_10_8536110520078009685.out
-./branch_and_bound/main instances/instance-uniform-20_10_8536110520078009685.txt > out/bb/instance-uniform-20_10_8536110520078009685.out
+brkga instance-uniform-20_30_7946767810833159230.txt
+BB instance-uniform-20_30_7946767810833159230.txt
+BB-brkga instance-uniform-20_30_7946767810833159230.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-20_30_6804260996746362198.txt > out/brkga/instance-uniform-20_30_6804260996746362198.out
-./branch_and_bound/main instances/instance-uniform-20_30_6804260996746362198.txt > out/bb/instance-uniform-20_30_6804260996746362198.out
+brkga instance-uniform-20_50_7166791217815916714.txt
+BB instance-uniform-20_50_7166791217815916714.txt
+BB-brkga instance-uniform-20_50_7166791217815916714.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-20_50_3785576307725700678.txt > out/brkga/instance-uniform-20_50_3785576307725700678.out
-./branch_and_bound/main instances/instance-uniform-20_50_3785576307725700678.txt > out/bb/instance-uniform-20_50_3785576307725700678.out
+brkga instance-uniform-30_10_5487141185222699701.txt
+BB instance-uniform-30_10_5487141185222699701.txt
+BB-brkga instance-uniform-30_10_5487141185222699701.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-30_10_5372368400714571683.txt > out/brkga/instance-uniform-30_10_5372368400714571683.out
-./branch_and_bound/main instances/instance-uniform-30_10_5372368400714571683.txt > out/bb/instance-uniform-30_10_5372368400714571683.out
+brkga instance-uniform-30_30_5518634776187720274.txt
+BB instance-uniform-30_30_5518634776187720274.txt
+BB-brkga instance-uniform-30_30_5518634776187720274.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-30_30_1807058463452882016.txt > out/brkga/instance-uniform-30_30_1807058463452882016.out
-./branch_and_bound/main instances/instance-uniform-30_30_1807058463452882016.txt > out/bb/instance-uniform-30_30_1807058463452882016.out
+brkga instance-uniform-30_50_6897445488919758962.txt
+BB instance-uniform-30_50_6897445488919758962.txt
+BB-brkga instance-uniform-30_50_6897445488919758962.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-30_50_7605177278520993555.txt > out/brkga/instance-uniform-30_50_7605177278520993555.out
-./branch_and_bound/main instances/instance-uniform-30_50_7605177278520993555.txt > out/bb/instance-uniform-30_50_7605177278520993555.out
+brkga instance-uniform-5_10_8918558323521365203.txt
+BB instance-uniform-5_10_8918558323521365203.txt
+BB-brkga instance-uniform-5_10_8918558323521365203.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-5_10_8380045905751772194.txt > out/brkga/instance-uniform-5_10_8380045905751772194.out
-./branch_and_bound/main instances/instance-uniform-5_10_8380045905751772194.txt > out/bb/instance-uniform-5_10_8380045905751772194.out
+brkga instance-uniform-5_30_5316484456983232856.txt
+BB instance-uniform-5_30_5316484456983232856.txt
+BB-brkga instance-uniform-5_30_5316484456983232856.txt
 
-./brkgaAPI/src/samplecode instances/instance-uniform-5_30_4882940996471638670.txt > out/brkga/instance-uniform-5_30_4882940996471638670.out
-./branch_and_bound/main instances/instance-uniform-5_30_4882940996471638670.txt > out/bb/instance-uniform-5_30_4882940996471638670.out
-
-./brkgaAPI/src/samplecode instances/instance-uniform-5_50_7437980588482031995.txt > out/brkga/instance-uniform-5_50_7437980588482031995.out
-./branch_and_bound/main instances/instance-uniform-5_50_7437980588482031995.txt > out/bb/instance-uniform-5_50_7437980588482031995.out
+brkga instance-uniform-5_50_3454365547511170571.txt
+BB instance-uniform-5_50_3454365547511170571.txt
+BB-brkga instance-uniform-5_50_3454365547511170571.txt
 
