@@ -1,0 +1,12 @@
+K 5
+MAX SUBP 1800
+LB 627
+UB 927
+solution value: 657 | Subp 7 | Time 0.00s
+solution value: 685 | Subp 8 | Time 0.00s
+solution value: 715 | Subp 19 | Time 0.00s
+solution value: 766 | Subp 90 | Time 0.00s
+Record: 766
+Subp: 295
+Time 0.00
+2 3 7 14 22 

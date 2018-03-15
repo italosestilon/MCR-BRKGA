@@ -1,0 +1,55 @@
+K 30
+MAX SUBP 5878960461428293632
+LB 11681
+UB 21750
+solution value: 11699 | Subp 46 | Time 0.00s
+solution value: 11804 | Subp 138 | Time 0.00s
+solution value: 11814 | Subp 148 | Time 0.00s
+solution value: 11824 | Subp 199 | Time 0.00s
+solution value: 11832 | Subp 607 | Time 0.00s
+solution value: 11841 | Subp 1162 | Time 0.00s
+solution value: 11866 | Subp 1168 | Time 0.00s
+solution value: 11904 | Subp 1260 | Time 0.00s
+solution value: 11924 | Subp 1264 | Time 0.00s
+solution value: 11927 | Subp 1270 | Time 0.00s
+solution value: 11986 | Subp 3811 | Time 0.00s
+solution value: 12003 | Subp 8913 | Time 0.01s
+solution value: 12020 | Subp 51988 | Time 0.04s
+solution value: 12051 | Subp 52080 | Time 0.04s
+solution value: 12057 | Subp 52090 | Time 0.04s
+solution value: 12090 | Subp 120307 | Time 0.08s
+solution value: 12114 | Subp 135564 | Time 0.09s
+solution value: 12115 | Subp 180632 | Time 0.12s
+solution value: 12134 | Subp 246208 | Time 0.17s
+solution value: 12138 | Subp 428291 | Time 0.29s
+solution value: 12148 | Subp 428304 | Time 0.29s
+solution value: 12160 | Subp 497158 | Time 0.34s
+solution value: 12180 | Subp 497181 | Time 0.34s
+solution value: 12184 | Subp 950512 | Time 0.65s
+solution value: 12236 | Subp 950614 | Time 0.65s
+solution value: 12252 | Subp 13365275 | Time 9.24s
+solution value: 12262 | Subp 13477069 | Time 9.32s
+solution value: 12263 | Subp 19272537 | Time 13.31s
+solution value: 12278 | Subp 19272547 | Time 13.31s
+solution value: 12285 | Subp 19354921 | Time 13.36s
+solution value: 12301 | Subp 19524051 | Time 13.48s
+solution value: 12323 | Subp 19524510 | Time 13.48s
+solution value: 12339 | Subp 19524599 | Time 13.48s
+solution value: 12361 | Subp 19524612 | Time 13.48s
+solution value: 12369 | Subp 19649911 | Time 13.57s
+solution value: 12377 | Subp 20181221 | Time 13.93s
+solution value: 12387 | Subp 84547323 | Time 59.67s
+solution value: 12393 | Subp 84655667 | Time 59.75s
+solution value: 12401 | Subp 84781018 | Time 59.83s
+solution value: 12411 | Subp 84781036 | Time 59.83s
+solution value: 12420 | Subp 84907269 | Time 59.92s
+solution value: 12444 | Subp 85360573 | Time 60.23s
+solution value: 12448 | Subp 322638789 | Time 237.95s
+solution value: 12474 | Subp 329674994 | Time 242.86s
+solution value: 12486 | Subp 403234494 | Time 294.88s
+solution value: 12489 | Subp 3797085164 | Time 2754.13s
+solution value: 12494 | Subp 3909194692 | Time 2828.73s
+Record: 12494
+Subp: 4971229347
+Time 3600.00
+14 92 118 172 246 291 309 395 442 490 519 568 602 651 739 778 817 861 925 964 1008 1087 1103 1189 1249 1299 1308 1372 1419 1467 

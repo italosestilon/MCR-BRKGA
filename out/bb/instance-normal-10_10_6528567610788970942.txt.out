@@ -1,0 +1,16 @@
+K 10
+MAX SUBP 3628800
+LB 4536
+UB 4666
+solution value: 4545 | Subp 12 | Time 0.00s
+solution value: 4551 | Subp 732 | Time 0.00s
+solution value: 4553 | Subp 1744 | Time 0.00s
+solution value: 4557 | Subp 2484 | Time 0.00s
+solution value: 4561 | Subp 2487 | Time 0.00s
+solution value: 4565 | Subp 4299 | Time 0.00s
+solution value: 4566 | Subp 6409 | Time 0.01s
+solution value: 4567 | Subp 6412 | Time 0.01s
+Record: 4567
+Subp: 124028
+Time 0.05
+0 7 11 17 20 22 25 39 42 47 

@@ -1,0 +1,45 @@
+K 30
+MAX SUBP -7372090185739141120
+LB 24460
+UB 43389
+solution value: 24603 | Subp 41 | Time 0.00s
+solution value: 24622 | Subp 611 | Time 0.00s
+solution value: 24684 | Subp 14682 | Time 0.01s
+solution value: 24688 | Subp 33857 | Time 0.02s
+solution value: 24699 | Subp 35636 | Time 0.02s
+solution value: 24766 | Subp 35637 | Time 0.02s
+solution value: 24851 | Subp 35646 | Time 0.02s
+solution value: 24893 | Subp 36216 | Time 0.02s
+solution value: 24999 | Subp 50287 | Time 0.03s
+solution value: 25037 | Subp 138972 | Time 0.08s
+solution value: 25040 | Subp 140150 | Time 0.09s
+solution value: 25081 | Subp 158147 | Time 0.10s
+solution value: 25110 | Subp 475009 | Time 0.29s
+solution value: 25125 | Subp 541176 | Time 0.33s
+solution value: 25136 | Subp 559537 | Time 0.34s
+solution value: 25177 | Subp 3535032 | Time 2.12s
+solution value: 25180 | Subp 3611470 | Time 2.17s
+solution value: 25196 | Subp 74427605 | Time 46.67s
+solution value: 25198 | Subp 74441670 | Time 46.67s
+solution value: 25292 | Subp 74441676 | Time 46.67s
+solution value: 25329 | Subp 74892535 | Time 46.94s
+solution value: 25336 | Subp 75350017 | Time 47.20s
+solution value: 25343 | Subp 78218897 | Time 48.93s
+solution value: 25380 | Subp 78218906 | Time 48.93s
+solution value: 25381 | Subp 81728166 | Time 51.04s
+solution value: 25400 | Subp 82025746 | Time 51.21s
+solution value: 25430 | Subp 111481380 | Time 68.63s
+solution value: 25435 | Subp 113453246 | Time 69.80s
+solution value: 25449 | Subp 153896932 | Time 96.06s
+solution value: 25461 | Subp 154340027 | Time 96.33s
+solution value: 25464 | Subp 155823886 | Time 97.24s
+solution value: 25503 | Subp 212308563 | Time 133.61s
+solution value: 25513 | Subp 1176837562 | Time 811.83s
+solution value: 25516 | Subp 1176898312 | Time 811.87s
+solution value: 25525 | Subp 1177305564 | Time 812.12s
+solution value: 25556 | Subp 1177313291 | Time 812.13s
+solution value: 25569 | Subp 1177395501 | Time 812.17s
+Record: 25569
+Subp: 5022560315
+Time 3600.00
+3 23 65 134 150 186 195 209 221 233 256 281 316 353 356 392 413 445 447 478 505 514 539 577 590 629 652 677 702 720 

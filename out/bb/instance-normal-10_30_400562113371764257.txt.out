@@ -1,0 +1,28 @@
+K 10
+MAX SUBP 392137200000
+LB 4540
+UB 4748
+solution value: 4552 | Subp 13 | Time 0.00s
+solution value: 4555 | Subp 18 | Time 0.00s
+solution value: 4557 | Subp 30464 | Time 0.01s
+solution value: 4558 | Subp 75263 | Time 0.03s
+solution value: 4559 | Subp 76410 | Time 0.03s
+solution value: 4560 | Subp 191421 | Time 0.06s
+solution value: 4562 | Subp 251997 | Time 0.08s
+solution value: 4565 | Subp 1829153 | Time 0.59s
+solution value: 4567 | Subp 1885400 | Time 0.61s
+solution value: 4568 | Subp 2699219 | Time 0.87s
+solution value: 4569 | Subp 7780279 | Time 2.55s
+solution value: 4573 | Subp 8489823 | Time 2.78s
+solution value: 4574 | Subp 8650960 | Time 2.84s
+solution value: 4575 | Subp 23466827 | Time 7.79s
+solution value: 4576 | Subp 27761539 | Time 9.20s
+solution value: 4579 | Subp 38754021 | Time 12.85s
+solution value: 4581 | Subp 38808875 | Time 12.87s
+solution value: 4583 | Subp 116584382 | Time 39.39s
+solution value: 4584 | Subp 214785874 | Time 72.67s
+solution value: 4589 | Subp 215842700 | Time 73.02s
+Record: 4589
+Subp: 960465329
+Time 334.37
+3 18 27 35 61 88 93 122 140 153 

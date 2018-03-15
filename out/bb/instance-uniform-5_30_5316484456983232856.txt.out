@@ -1,0 +1,22 @@
+K 5
+MAX SUBP 1021020
+LB 460
+UB 1000
+solution value: 672 | Subp 7 | Time 0.00s
+solution value: 744 | Subp 31 | Time 0.00s
+solution value: 769 | Subp 167 | Time 0.00s
+solution value: 805 | Subp 173 | Time 0.00s
+solution value: 826 | Subp 198 | Time 0.00s
+solution value: 848 | Subp 365 | Time 0.00s
+solution value: 853 | Subp 1436 | Time 0.00s
+solution value: 861 | Subp 1604 | Time 0.00s
+solution value: 865 | Subp 1608 | Time 0.00s
+solution value: 876 | Subp 1772 | Time 0.00s
+solution value: 879 | Subp 2365 | Time 0.00s
+solution value: 883 | Subp 3429 | Time 0.00s
+solution value: 894 | Subp 3877 | Time 0.00s
+solution value: 898 | Subp 3944 | Time 0.00s
+Record: 898
+Subp: 12001
+Time 0.01
+17 35 49 62 71 

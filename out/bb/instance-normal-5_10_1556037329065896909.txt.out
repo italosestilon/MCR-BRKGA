@@ -1,0 +1,12 @@
+K 5
+MAX SUBP 2430
+LB 1005
+UB 1039
+solution value: 1009 | Subp 7 | Time 0.00s
+solution value: 1020 | Subp 12 | Time 0.00s
+solution value: 1021 | Subp 30 | Time 0.00s
+solution value: 1026 | Subp 39 | Time 0.00s
+Record: 1026
+Subp: 228
+Time 0.00
+4 9 18 22 26 

@@ -1,0 +1,27 @@
+K 10
+MAX SUBP 10000000000
+LB 1373
+UB 2243
+solution value: 1377 | Subp 12 | Time 0.00s
+solution value: 1384 | Subp 14 | Time 0.00s
+solution value: 1470 | Subp 17 | Time 0.00s
+solution value: 1479 | Subp 74 | Time 0.00s
+solution value: 1489 | Subp 228 | Time 0.00s
+solution value: 1520 | Subp 840 | Time 0.00s
+solution value: 1542 | Subp 1858 | Time 0.00s
+solution value: 1553 | Subp 1915 | Time 0.00s
+solution value: 1583 | Subp 2421 | Time 0.00s
+solution value: 1639 | Subp 11012 | Time 0.01s
+solution value: 1650 | Subp 11046 | Time 0.01s
+solution value: 1652 | Subp 17935 | Time 0.01s
+solution value: 1684 | Subp 160463 | Time 0.07s
+solution value: 1703 | Subp 160507 | Time 0.07s
+solution value: 1713 | Subp 683697 | Time 0.25s
+solution value: 1726 | Subp 691877 | Time 0.25s
+solution value: 1729 | Subp 691912 | Time 0.25s
+solution value: 1733 | Subp 5516785 | Time 1.94s
+solution value: 1737 | Subp 10918097 | Time 3.85s
+Record: 1737
+Subp: 25051721
+Time 8.84
+3 14 27 35 46 58 60 73 84 94 

@@ -1,0 +1,63 @@
+K 10
+MAX SUBP 590490000000000
+LB 1272
+UB 2250
+solution value: 1289 | Subp 13 | Time 0.00s
+solution value: 1292 | Subp 15 | Time 0.00s
+solution value: 1313 | Subp 17 | Time 0.00s
+solution value: 1315 | Subp 23 | Time 0.00s
+solution value: 1332 | Subp 27 | Time 0.00s
+solution value: 1367 | Subp 42 | Time 0.00s
+solution value: 1389 | Subp 46 | Time 0.00s
+solution value: 1394 | Subp 50 | Time 0.00s
+solution value: 1416 | Subp 54 | Time 0.00s
+solution value: 1421 | Subp 3213 | Time 0.00s
+solution value: 1423 | Subp 47631 | Time 0.01s
+solution value: 1431 | Subp 59265 | Time 0.02s
+solution value: 1435 | Subp 82347 | Time 0.02s
+solution value: 1464 | Subp 82353 | Time 0.02s
+solution value: 1467 | Subp 85760 | Time 0.02s
+solution value: 1479 | Subp 105784 | Time 0.03s
+solution value: 1490 | Subp 140154 | Time 0.04s
+solution value: 1499 | Subp 157414 | Time 0.04s
+solution value: 1500 | Subp 182482 | Time 0.05s
+solution value: 1507 | Subp 186460 | Time 0.05s
+solution value: 1515 | Subp 188180 | Time 0.05s
+solution value: 1540 | Subp 197095 | Time 0.05s
+solution value: 1551 | Subp 226895 | Time 0.06s
+solution value: 1560 | Subp 230273 | Time 0.06s
+solution value: 1563 | Subp 238384 | Time 0.07s
+solution value: 1572 | Subp 320770 | Time 0.09s
+solution value: 1588 | Subp 438653 | Time 0.13s
+solution value: 1599 | Subp 1333580 | Time 0.41s
+solution value: 1600 | Subp 1434091 | Time 0.44s
+solution value: 1607 | Subp 1525373 | Time 0.47s
+solution value: 1610 | Subp 1527272 | Time 0.47s
+solution value: 1631 | Subp 2444172 | Time 0.76s
+solution value: 1633 | Subp 2558097 | Time 0.79s
+solution value: 1638 | Subp 3112725 | Time 0.96s
+solution value: 1643 | Subp 3112756 | Time 0.96s
+solution value: 1653 | Subp 3239240 | Time 1.00s
+solution value: 1670 | Subp 3239541 | Time 1.00s
+solution value: 1683 | Subp 4457494 | Time 1.41s
+solution value: 1690 | Subp 10715150 | Time 3.49s
+solution value: 1702 | Subp 25453167 | Time 8.39s
+solution value: 1706 | Subp 34305540 | Time 11.34s
+solution value: 1729 | Subp 34305541 | Time 11.34s
+solution value: 1731 | Subp 34409839 | Time 11.37s
+solution value: 1737 | Subp 88511248 | Time 29.98s
+solution value: 1741 | Subp 98609546 | Time 33.42s
+solution value: 1759 | Subp 98639073 | Time 33.43s
+solution value: 1767 | Subp 98753237 | Time 33.47s
+solution value: 1775 | Subp 98753841 | Time 33.47s
+solution value: 1779 | Subp 167192252 | Time 57.32s
+solution value: 1789 | Subp 169336284 | Time 58.07s
+solution value: 1794 | Subp 169367816 | Time 58.08s
+solution value: 1812 | Subp 169524638 | Time 58.13s
+solution value: 1813 | Subp 1388545224 | Time 501.72s
+solution value: 1825 | Subp 1767061584 | Time 638.69s
+solution value: 1834 | Subp 6166423106 | Time 2277.83s
+Record: 1834
+Subp: 9726657182
+Time 3600.00
+6 51 72 99 138 175 199 218 243 290 

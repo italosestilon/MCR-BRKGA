@@ -1,0 +1,29 @@
+K 5
+MAX SUBP 10905335
+LB 650
+UB 1000
+solution value: 658 | Subp 7 | Time 0.00s
+solution value: 681 | Subp 10 | Time 0.00s
+solution value: 689 | Subp 11 | Time 0.00s
+solution value: 702 | Subp 12 | Time 0.00s
+solution value: 740 | Subp 17 | Time 0.00s
+solution value: 769 | Subp 446 | Time 0.00s
+solution value: 799 | Subp 449 | Time 0.00s
+solution value: 808 | Subp 455 | Time 0.00s
+solution value: 834 | Subp 472 | Time 0.00s
+solution value: 840 | Subp 514 | Time 0.00s
+solution value: 844 | Subp 517 | Time 0.00s
+solution value: 847 | Subp 530 | Time 0.00s
+solution value: 851 | Subp 1850 | Time 0.00s
+solution value: 853 | Subp 2902 | Time 0.00s
+solution value: 884 | Subp 3090 | Time 0.00s
+solution value: 892 | Subp 12183 | Time 0.01s
+solution value: 893 | Subp 17166 | Time 0.01s
+solution value: 904 | Subp 17884 | Time 0.01s
+solution value: 905 | Subp 25028 | Time 0.02s
+solution value: 907 | Subp 32767 | Time 0.02s
+solution value: 925 | Subp 45439 | Time 0.02s
+Record: 925
+Subp: 51397
+Time 0.03
+13 32 61 77 111 
