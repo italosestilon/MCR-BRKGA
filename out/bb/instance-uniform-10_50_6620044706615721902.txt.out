@@ -1,0 +1,49 @@
+K 10
+MAX SUBP 42918543360
+LB 2479
+UB 4356
+solution value: 2540 | Subp 12 | Time 0.00s
+solution value: 2660 | Subp 16 | Time 0.00s
+solution value: 2677 | Subp 99 | Time 0.00s
+solution value: 2727 | Subp 141 | Time 0.00s
+solution value: 2729 | Subp 224 | Time 0.00s
+solution value: 2739 | Subp 232 | Time 0.00s
+solution value: 2765 | Subp 241 | Time 0.00s
+solution value: 2773 | Subp 391 | Time 0.00s
+solution value: 2787 | Subp 399 | Time 0.00s
+solution value: 2830 | Subp 434 | Time 0.00s
+solution value: 2837 | Subp 1599 | Time 0.00s
+solution value: 2856 | Subp 1797 | Time 0.00s
+solution value: 2862 | Subp 8497 | Time 0.01s
+solution value: 2917 | Subp 8505 | Time 0.01s
+solution value: 2922 | Subp 8550 | Time 0.01s
+solution value: 2934 | Subp 8705 | Time 0.01s
+solution value: 2948 | Subp 8713 | Time 0.01s
+solution value: 2956 | Subp 8717 | Time 0.01s
+solution value: 2960 | Subp 8724 | Time 0.01s
+solution value: 2982 | Subp 10030 | Time 0.01s
+solution value: 3010 | Subp 15273 | Time 0.01s
+solution value: 3040 | Subp 15289 | Time 0.01s
+solution value: 3044 | Subp 16284 | Time 0.01s
+solution value: 3061 | Subp 29631 | Time 0.02s
+solution value: 3063 | Subp 47332 | Time 0.02s
+solution value: 3074 | Subp 48195 | Time 0.02s
+solution value: 3119 | Subp 48213 | Time 0.02s
+solution value: 3164 | Subp 48225 | Time 0.02s
+solution value: 3189 | Subp 54835 | Time 0.03s
+solution value: 3204 | Subp 70415 | Time 0.03s
+solution value: 3242 | Subp 70762 | Time 0.03s
+solution value: 3250 | Subp 407922 | Time 0.16s
+solution value: 3251 | Subp 668923 | Time 0.25s
+solution value: 3265 | Subp 670273 | Time 0.25s
+solution value: 3275 | Subp 1597996 | Time 0.60s
+solution value: 3276 | Subp 3050249 | Time 1.14s
+solution value: 3325 | Subp 3066926 | Time 1.14s
+solution value: 3333 | Subp 3179589 | Time 1.18s
+solution value: 3347 | Subp 5344043 | Time 1.98s
+solution value: 3364 | Subp 5344053 | Time 1.98s
+solution value: 3413 | Subp 12797269 | Time 4.74s
+Record: 3413
+Subp: 55126744
+Time 20.38
+2 49 58 92 99 102 159 164 201 214 

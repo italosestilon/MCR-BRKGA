@@ -1,0 +1,33 @@
+K 5
+MAX SUBP 24300000
+LB 317
+UB 500
+solution value: 320 | Subp 7 | Time 0.00s
+solution value: 338 | Subp 28 | Time 0.00s
+solution value: 348 | Subp 37 | Time 0.00s
+solution value: 353 | Subp 38 | Time 0.00s
+solution value: 358 | Subp 47 | Time 0.00s
+solution value: 359 | Subp 59 | Time 0.00s
+solution value: 365 | Subp 62 | Time 0.00s
+solution value: 367 | Subp 146 | Time 0.00s
+solution value: 381 | Subp 154 | Time 0.00s
+solution value: 392 | Subp 163 | Time 0.00s
+solution value: 398 | Subp 240 | Time 0.00s
+solution value: 407 | Subp 1030 | Time 0.00s
+solution value: 408 | Subp 1697 | Time 0.00s
+solution value: 409 | Subp 1825 | Time 0.00s
+solution value: 411 | Subp 1894 | Time 0.00s
+solution value: 422 | Subp 2016 | Time 0.00s
+solution value: 425 | Subp 2162 | Time 0.00s
+solution value: 430 | Subp 3139 | Time 0.00s
+solution value: 432 | Subp 3175 | Time 0.00s
+solution value: 437 | Subp 3195 | Time 0.00s
+solution value: 438 | Subp 6486 | Time 0.00s
+solution value: 443 | Subp 6989 | Time 0.00s
+solution value: 445 | Subp 7976 | Time 0.00s
+solution value: 459 | Subp 10826 | Time 0.01s
+solution value: 465 | Subp 26829 | Time 0.02s
+Record: 465
+Subp: 59011
+Time 0.03
+2 45 86 114 139 

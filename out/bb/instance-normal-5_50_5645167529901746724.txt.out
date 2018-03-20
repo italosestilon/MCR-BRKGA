@@ -1,0 +1,22 @@
+K 5
+MAX SUBP 1811040
+LB 996
+UB 1055
+solution value: 1005 | Subp 7 | Time 0.00s
+solution value: 1006 | Subp 13 | Time 0.00s
+solution value: 1008 | Subp 16 | Time 0.00s
+solution value: 1009 | Subp 20 | Time 0.00s
+solution value: 1015 | Subp 36 | Time 0.00s
+solution value: 1017 | Subp 187 | Time 0.00s
+solution value: 1018 | Subp 387 | Time 0.00s
+solution value: 1020 | Subp 437 | Time 0.00s
+solution value: 1022 | Subp 1679 | Time 0.00s
+solution value: 1024 | Subp 1708 | Time 0.00s
+solution value: 1025 | Subp 1860 | Time 0.00s
+solution value: 1026 | Subp 2725 | Time 0.00s
+solution value: 1027 | Subp 2976 | Time 0.00s
+solution value: 1028 | Subp 3975 | Time 0.00s
+Record: 1028
+Subp: 53601
+Time 0.02
+38 40 59 63 115 

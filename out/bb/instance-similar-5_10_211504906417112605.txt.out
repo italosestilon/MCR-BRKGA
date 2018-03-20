@@ -1,0 +1,18 @@
+K 5
+MAX SUBP 100000
+LB 298
+UB 500
+solution value: 322 | Subp 7 | Time 0.00s
+solution value: 355 | Subp 9 | Time 0.00s
+solution value: 370 | Subp 48 | Time 0.00s
+solution value: 376 | Subp 50 | Time 0.00s
+solution value: 381 | Subp 61 | Time 0.00s
+solution value: 391 | Subp 112 | Time 0.00s
+solution value: 393 | Subp 836 | Time 0.00s
+solution value: 396 | Subp 847 | Time 0.00s
+solution value: 405 | Subp 885 | Time 0.00s
+solution value: 441 | Subp 1362 | Time 0.00s
+Record: 441
+Subp: 2901
+Time 0.00
+2 10 24 35 41 

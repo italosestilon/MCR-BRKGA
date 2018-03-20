@@ -1,0 +1,20 @@
+K 5
+MAX SUBP 4804800
+LB 1002
+UB 1063
+solution value: 1007 | Subp 7 | Time 0.00s
+solution value: 1008 | Subp 12 | Time 0.00s
+solution value: 1012 | Subp 15 | Time 0.00s
+solution value: 1020 | Subp 40 | Time 0.00s
+solution value: 1021 | Subp 1136 | Time 0.00s
+solution value: 1022 | Subp 1274 | Time 0.00s
+solution value: 1023 | Subp 4964 | Time 0.00s
+solution value: 1024 | Subp 6133 | Time 0.00s
+solution value: 1025 | Subp 6137 | Time 0.00s
+solution value: 1026 | Subp 7313 | Time 0.00s
+solution value: 1031 | Subp 7743 | Time 0.00s
+solution value: 1033 | Subp 48583 | Time 0.02s
+Record: 1033
+Subp: 65999
+Time 0.02
+2 27 65 87 91 

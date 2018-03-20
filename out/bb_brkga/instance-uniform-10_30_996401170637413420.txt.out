@@ -1,0 +1,13 @@
+brkgaAPI/solutions/instance-uniform-10_30_996401170637413420.txt
+3508
+K 10
+MAX SUBP 2900234937600
+LB 3508
+UB 4493
+solution value: 3509 | Subp 580632044 | Time 201.72s
+solution value: 3516 | Subp 932683253 | Time 324.69s
+solution value: 3522 | Subp 2561474309 | Time 894.95s
+Record: 3522
+Subp: 2798385256
+Time 979.05
+21 38 52 87 104 119 141 163 180 184 

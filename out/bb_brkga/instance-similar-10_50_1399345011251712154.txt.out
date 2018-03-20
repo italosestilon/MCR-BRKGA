@@ -1,0 +1,12 @@
+brkgaAPI/solutions/instance-similar-10_50_1399345011251712154.txt
+1836
+K 10
+MAX SUBP 97656250000000000
+LB 1836
+UB 2250
+solution value: 1844 | Subp 350623772 | Time 128.44s
+solution value: 1852 | Subp 1138462538 | Time 421.47s
+Record: 1852
+Subp: 9398919435
+Time 3600.00
+33 78 121 172 218 271 312 383 441 475 

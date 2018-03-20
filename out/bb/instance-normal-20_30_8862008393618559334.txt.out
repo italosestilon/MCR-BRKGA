@@ -1,0 +1,50 @@
+K 20
+MAX SUBP -3172106364384182272
+LB 19043
+UB 20003
+solution value: 19046 | Subp 43 | Time 0.00s
+solution value: 19049 | Subp 45 | Time 0.00s
+solution value: 19058 | Subp 73 | Time 0.00s
+solution value: 19064 | Subp 75 | Time 0.00s
+solution value: 19066 | Subp 83 | Time 0.00s
+solution value: 19069 | Subp 587 | Time 0.00s
+solution value: 19073 | Subp 597 | Time 0.00s
+solution value: 19077 | Subp 2496 | Time 0.00s
+solution value: 19080 | Subp 12965 | Time 0.01s
+solution value: 19082 | Subp 13015 | Time 0.01s
+solution value: 19084 | Subp 27559 | Time 0.01s
+solution value: 19086 | Subp 27569 | Time 0.01s
+solution value: 19091 | Subp 44341 | Time 0.02s
+solution value: 19098 | Subp 44391 | Time 0.02s
+solution value: 19100 | Subp 71939 | Time 0.03s
+solution value: 19101 | Subp 87857 | Time 0.03s
+solution value: 19103 | Subp 88118 | Time 0.03s
+solution value: 19104 | Subp 126211 | Time 0.04s
+solution value: 19108 | Subp 147708 | Time 0.05s
+solution value: 19112 | Subp 148203 | Time 0.05s
+solution value: 19114 | Subp 150224 | Time 0.05s
+solution value: 19115 | Subp 619517 | Time 0.23s
+solution value: 19116 | Subp 639555 | Time 0.24s
+solution value: 19117 | Subp 667371 | Time 0.25s
+solution value: 19118 | Subp 688742 | Time 0.26s
+solution value: 19121 | Subp 688752 | Time 0.26s
+solution value: 19125 | Subp 688802 | Time 0.26s
+solution value: 19128 | Subp 1145685 | Time 0.43s
+solution value: 19130 | Subp 1517598 | Time 0.58s
+solution value: 19133 | Subp 1552533 | Time 0.59s
+solution value: 19139 | Subp 1554198 | Time 0.59s
+solution value: 19141 | Subp 563353280 | Time 242.38s
+solution value: 19145 | Subp 563598357 | Time 242.48s
+solution value: 19146 | Subp 563670219 | Time 242.51s
+solution value: 19147 | Subp 563724204 | Time 242.53s
+solution value: 19150 | Subp 563983980 | Time 242.64s
+solution value: 19151 | Subp 5407004012 | Time 2342.07s
+solution value: 19154 | Subp 7990362237 | Time 3469.33s
+solution value: 19155 | Subp 7990362287 | Time 3469.33s
+solution value: 19157 | Subp 7990364015 | Time 3469.33s
+solution value: 19159 | Subp 8006221752 | Time 3476.03s
+solution value: 19161 | Subp 8008050538 | Time 3476.79s
+Record: 19161
+Subp: 8295394365
+Time 3600.00
+9 32 37 45 78 94 101 113 123 162 165 172 184 222 225 241 256 290 298 327 

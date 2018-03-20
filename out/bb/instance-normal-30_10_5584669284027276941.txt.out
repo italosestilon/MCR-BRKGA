@@ -1,0 +1,23 @@
+K 30
+MAX SUBP 9205512979074777088
+LB 43656
+UB 45198
+solution value: 43657 | Subp 36 | Time 0.00s
+solution value: 43665 | Subp 40 | Time 0.00s
+solution value: 43680 | Subp 1325 | Time 0.00s
+solution value: 43683 | Subp 15395 | Time 0.01s
+solution value: 43687 | Subp 15400 | Time 0.01s
+solution value: 43688 | Subp 15404 | Time 0.01s
+solution value: 43690 | Subp 15409 | Time 0.01s
+solution value: 43694 | Subp 15436 | Time 0.01s
+solution value: 43701 | Subp 16681 | Time 0.01s
+solution value: 43704 | Subp 29202 | Time 0.02s
+solution value: 43705 | Subp 68494 | Time 0.04s
+solution value: 43713 | Subp 543907 | Time 0.31s
+solution value: 43715 | Subp 587585 | Time 0.33s
+solution value: 43716 | Subp 298002609 | Time 193.21s
+solution value: 43722 | Subp 298002636 | Time 193.21s
+Record: 43722
+Subp: 5509374362
+Time 3600.00
+5 10 13 14 22 30 35 39 40 47 50 52 56 57 68 80 86 93 103 107 116 118 125 127 134 144 151 159 164 172 

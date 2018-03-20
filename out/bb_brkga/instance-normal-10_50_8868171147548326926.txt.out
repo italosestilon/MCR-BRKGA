@@ -1,0 +1,14 @@
+brkgaAPI/solutions/instance-normal-10_50_8868171147548326926.txt
+4587
+K 10
+MAX SUBP 6170325258240
+LB 4587
+UB 4761
+solution value: 4588 | Subp 184662460 | Time 61.00s
+solution value: 4589 | Subp 184813749 | Time 61.05s
+solution value: 4590 | Subp 9615439609 | Time 3208.26s
+solution value: 4593 | Subp 9663296751 | Time 3224.08s
+Record: 4593
+Subp: 10780320323
+Time 3600.00
+7 42 77 94 119 150 169 184 203 224 
