@@ -46,22 +46,22 @@ with open('projects.tex', 'w') as texfile:
 	texfile.write('\\begin{scriptsize}\n')
 	texfile.write('\\setlength\\LTleft{0pt}            % default: \\fill\n')
 	texfile.write('\\setlength\\LTright{0pt}           % default: \\fill\n')	
-	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}lllllllllll@{}}\n')
+	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}llllllllll@{}}\n')
 	
 	texfile.write('\\label{table:tests}\\\\\n')	
 			
 	texfile.write('\\hline\n')
-	texfile.write('K & max set size & distribution & BB & & BB-brkga & & brkga & & PLI\\\\ \n')
+	texfile.write('K & Max set size & Type & BB & & brkga & & & PLI\\\\ \n')
 	texfile.write('\\hline\n')
 
-	texfile.write('& & & incubent & time & incubent & time & incubent & time & incubent & time\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
+	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
 	texfile.write('\\hline\n')
 	texfile.write('\\endfirsthead\n')
 
 	texfile.write('\\hline\n')
-	texfile.write('K & max set size & distribution & BB & & BB-brkga & & brkga & & PLI\\\\ \n') #& brkga & PLI
+	texfile.write('K & Max set size & Type & BB & & brkga & & PLI\\\\ \n') #& brkga & PLI
 	texfile.write('\\hline\n')
-	texfile.write('& & & incubent & time & incubent & time & incubent & time & incubent & time\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
+	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
 	texfile.write('\\hline\n')
 	texfile.write('\\endhead\n')
 	texfile.write('\\hline \multicolumn{5}{r}{{Continue next page...}} \\\\ \n')
@@ -96,6 +96,7 @@ with open('projects.tex', 'w') as texfile:
 		
 		flag2 = True
 		
+		'''
 		try:
 			filename = "out/bb_brkga/%s.out" % (inst[0])
 			f = open(filename)
@@ -109,7 +110,7 @@ with open('projects.tex', 'w') as texfile:
 		if flag2:
 			if t2 < menor:
 				menor  = t2
-		
+		'''
 		
 		
 		flag3 = True
@@ -136,7 +137,11 @@ with open('projects.tex', 'w') as texfile:
 			filename = "integer_programming/time/%s" % (inst[0])
 			f = open(filename)
 			lines = f.readlines();
-			t4   = float(lines[0])	
+			t4   = float(lines[0])
+			filename = "integer_programming/gap/%s" % (inst[0])
+			f = open(filename)
+			lines = f.readlines();
+			g4 = float(lines[0])
 		except:
 			flag4 = False
 		
@@ -157,7 +162,7 @@ with open('projects.tex', 'w') as texfile:
 
 		else:
 			texfile.write('& fail & fail')
-		
+		'''
 		if flag2:
 			if t2 < 3600:
 				texfile.write('& %d*' % ( r2 ) )
@@ -171,7 +176,7 @@ with open('projects.tex', 'w') as texfile:
 				texfile.write('& %.0fs ' % ( t2 ) )
 		else:
 			texfile.write('& fail & fail')
-		
+		'''
 		
 		if flag3:
 			texfile.write('& %d' % ( r3 ) )
@@ -198,6 +203,13 @@ with open('projects.tex', 'w') as texfile:
 				texfile.write('& %.2fs ' % ( t4 ) )
 			else:
 				texfile.write('& %.0fs ' % ( t4 ) )
+
+			if g4 < 0:
+				texfile.write('& -- ')
+			elif g4 <= 100:
+				texfile.write('& %.2f\\%% ' % ( g4 ) )
+			else:
+				texfile.write('& %.d\\%% ' % ( g4 ) )
 		else:
 			texfile.write('& fail & fail')
 		
