@@ -64,9 +64,9 @@ with open('projects.tex', 'w') as texfile:
 	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
 	texfile.write('\\hline\n')
 	texfile.write('\\endhead\n')
-	texfile.write('\\hline \multicolumn{5}{r}{{Continue next page...}} \\\\ \n')
+	texfile.write('\\hline \multicolumn{10}{r}{{Continue next page...}} \\\\ \n')
 	texfile.write('\\endfoot\n')
-	texfile.write('\\multicolumn{5}{r}{{}} \\\\ \n')
+	texfile.write('\\multicolumn{10}{r}{{}} \\\\ \n')
 	texfile.write('\\endlastfoot\n')
 
 	for inst in instancias:
@@ -158,7 +158,7 @@ with open('projects.tex', 'w') as texfile:
 			elif t1 <= 100:
 				texfile.write('& %.2fs' % ( t1 ) )
 			else:
-				texfile.write('& %.0fs ' % ( t1 ) )
+				texfile.write('& %ds ' % ( t1 ) )
 
 		else:
 			texfile.write('& fail & fail')
@@ -173,7 +173,7 @@ with open('projects.tex', 'w') as texfile:
 			elif t2 <= 100:
 				texfile.write('& %.2fs ' % ( t2 ) )
 			else:
-				texfile.write('& %.0fs ' % ( t2 ) )
+				texfile.write('& %ds ' % ( t2 ) )
 		else:
 			texfile.write('& fail & fail')
 		'''
@@ -186,7 +186,7 @@ with open('projects.tex', 'w') as texfile:
 			elif t3 <= 100:
 				texfile.write('& %.2fs ' % ( t3 ) )
 			else:
-				texfile.write('& %.0fs ' % ( t3 ) )
+				texfile.write('& %ds ' % ( t3 ) )
 		else:
 			texfile.write('& fail & fail')
 
@@ -202,14 +202,14 @@ with open('projects.tex', 'w') as texfile:
 			elif t4 <= 100:
 				texfile.write('& %.2fs ' % ( t4 ) )
 			else:
-				texfile.write('& %.0fs ' % ( t4 ) )
+				texfile.write('& %ds ' % ( t4 ) )
 
 			if g4 < 0:
 				texfile.write('& -- ')
 			elif g4 <= 100:
-				texfile.write('& %.2f\\%% ' % ( g4 ) )
+				texfile.write('& %.2f ' % ( g4 ) )
 			else:
-				texfile.write('& %.d\\%% ' % ( g4 ) )
+				texfile.write('& %d ' % ( g4 ) )
 		else:
 			texfile.write('& fail & fail')
 		
