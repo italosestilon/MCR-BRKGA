@@ -51,7 +51,7 @@ with open('projects.tex', 'w') as texfile:
 	
 			
 	texfile.write('\\hline\n')
-	texfile.write('K & Max set size & Type & BB & & brkga & & & PLI\\\\ \n')
+	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{brkga} & & & \\textbf{PLI}\\\\ \n')
 	texfile.write('\\hline\n')
 
 	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
@@ -59,7 +59,7 @@ with open('projects.tex', 'w') as texfile:
 	texfile.write('\\endfirsthead\n')
 
 	texfile.write('\\hline\n')
-	texfile.write('K & Max set size & Type & BB & & brkga & & PLI\\\\ \n') #& brkga & PLI
+	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{brkga} & & & \\textbf{PLI}\\\\ \n') #& brkga & PLI
 	texfile.write('\\hline\n')
 	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
 	texfile.write('\\hline\n')
