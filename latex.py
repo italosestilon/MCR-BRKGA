@@ -45,10 +45,10 @@ instancias = [
 with open('projects.tex', 'w') as texfile:
 	texfile.write('\\begin{scriptsize}\n')
 	texfile.write('\\setlength\\LTleft{0pt}            % default: \\fill\n')
-	texfile.write('\\setlength\\LTright{0pt}           % default: \\fill\n')	
-	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}llllllllll@{}}\n')
+	texfile.write('\\setlength\\LTright{0pt}           % default: \\fill\n')
+	texfile.write('\\label{table:tests}\n')		
+	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}l|l|l|ll|ll|lll@{}}\n')
 	
-	texfile.write('\\label{table:tests}\\\\\n')	
 			
 	texfile.write('\\hline\n')
 	texfile.write('K & Max set size & Type & BB & & brkga & & & PLI\\\\ \n')
@@ -217,8 +217,7 @@ with open('projects.tex', 'w') as texfile:
 				
 
 
-	texfile.write('\\hline\\\\ \n')
-	texfile.write('\\text{* Optimal solution}\\\\\n')	  	
+	texfile.write('\\hline \n')	  	
 	texfile.write('\\caption{Tests results}\\\\ \n')		
 	texfile.write('\\end{longtable}\n')
 	texfile.write('\\end{scriptsize}\n') 

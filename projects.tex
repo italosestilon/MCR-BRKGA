@@ -1,8 +1,8 @@
 \begin{scriptsize}
 \setlength\LTleft{0pt}            % default: \fill
 \setlength\LTright{0pt}           % default: \fill
-\begin{longtable}{@{\extracolsep{\fill}}llllllllll@{}}
-\label{table:tests}\\
+\label{table:tests}
+\begin{longtable}{@{\extracolsep{\fill}}l|l|l|ll|ll|lll@{}}
 \hline
 K & Max set size & Type & BB & & brkga & & & PLI\\ 
 \hline
@@ -55,8 +55,7 @@ K & Max set size & Type & BB & & brkga & & PLI\\
  30 & 10 & uniform& 25139& 3600s& 26242& 0.92s & 24806& 3600s& 109\% \\
  30 & 30 & uniform& 24965& 3600s& 27793& 2.49s & 7975& 3600s& 2733\% \\
  30 & 50 & uniform& 25569& 3600s& 28710& 3.93s & 0& 3600s& -- \\
-\hline\\ 
-\text{* Optimal solution}\\
+\hline 
 \caption{Tests results}\\ 
 \end{longtable}
 \end{scriptsize}
