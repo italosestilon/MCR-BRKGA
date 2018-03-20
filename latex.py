@@ -46,22 +46,22 @@ with open('projects.tex', 'w') as texfile:
 	texfile.write('\\begin{scriptsize}\n')
 	texfile.write('\\setlength\\LTleft{0pt}            % default: \\fill\n')
 	texfile.write('\\setlength\\LTright{0pt}           % default: \\fill\n')	
-	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}lllllll@{}}\n')
+	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}lllllllllll@{}}\n')
 	
 	texfile.write('\\label{table:tests}\\\\\n')	
 			
 	texfile.write('\\hline\n')
-	texfile.write('K & max set size & distribution & BB & & BB-brkga\\\\ \n') #& brkga & PLI
+	texfile.write('K & max set size & distribution & BB & & BB-brkga & & brkga & & PLI\\\\ \n')
 	texfile.write('\\hline\n')
 
-	texfile.write('& & & $incubent$ & time & $incubent$ & time \\\\ \n'); #& $incubent$ & time & $incubent$ & time	
+	texfile.write('& & & incubent & time & incubent & time & incubent & time & incubent & time\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
 	texfile.write('\\hline\n')
 	texfile.write('\\endfirsthead\n')
 
 	texfile.write('\\hline\n')
-	texfile.write('K & max set size & distribution & BB & & BB-brkga\\\\ \n') #& brkga & PLI
+	texfile.write('K & max set size & distribution & BB & & BB-brkga & & brkga & & PLI\\\\ \n') #& brkga & PLI
 	texfile.write('\\hline\n')
-	texfile.write('& & & $incubent$ & time & $incubent$ & time \\\\ \n'); #& $incubent$ & time & $incubent$ & time	
+	texfile.write('& & & incubent & time & incubent & time & incubent & time & incubent & time\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
 	texfile.write('\\hline\n')
 	texfile.write('\\endhead\n')
 	texfile.write('\\hline \multicolumn{5}{r}{{Continue next page...}} \\\\ \n')
@@ -110,40 +110,44 @@ with open('projects.tex', 'w') as texfile:
 			if t2 < menor:
 				menor  = t2
 		
-		#if flag1 and flag2:
-		#	if r1 != r2:
-		#		print "ERRO"
 		
 		
-		'''
 		flag3 = True
 		
 		try:
-			filename = "../optcliquer/resultado/%s.out" % (inst[0])
+			filename = "out/brkga/%s.out" % (inst[0])
 			f = open(filename)
 			lines = f.readlines();				
-			r3   = int(lines[0].split("=")[1])
-			t3   = float(lines[2].split("=")[1])
-			sub3 = int(lines[3].split("=")[1])	
-			if w != -1:
-				if r3 != w:
-					print "ERRO\n"
-			w = r3
+			r3   = int(lines[len(lines)-2].split(" ")[1])
+			t3   = float(lines[len(lines)-1].split(" ")[1])	
 		except:
 			flag3 = False
 		
-		if flag3:
-			if t3 < menor:
-				menor  = t3
-		'''
-
 		razao1 = menor
-			
+	
+
+		flag4 = True
 		
-		#texfile.write('& %d ' % ( w ) )
+		try:
+			filename = "integer_programming/result/%s" % (inst[0])
+			f = open(filename)
+			lines = f.readlines();				
+			r4   = int(lines[0])
+			filename = "integer_programming/time/%s" % (inst[0])
+			f = open(filename)
+			lines = f.readlines();
+			t4   = float(lines[0])	
+		except:
+			flag4 = False
 		
+		razao1 = menor
+
 		if flag1:
-			texfile.write('& %d' % ( r1 ) )
+			if t1 < 3600:
+				texfile.write('& %d*' % ( r1 ) )
+			else:
+				texfile.write('& %d' % ( r1 ) )
+
 			if t1 >= 3600:
 				texfile.write('& 3600s')
 			elif t1 <= 100:
@@ -152,10 +156,13 @@ with open('projects.tex', 'w') as texfile:
 				texfile.write('& %.0fs ' % ( t1 ) )
 
 		else:
-			texfile.write('& fail '  )
+			texfile.write('& fail & fail')
 		
 		if flag2:
-			texfile.write('& %d' % ( r2 ) )
+			if t2 < 3600:
+				texfile.write('& %d*' % ( r2 ) )
+			else:
+				texfile.write('& %d' % ( r2 ) )
 			if t2 >= 3600:
 				texfile.write('& 3600s')
 			elif t2 <= 100:
@@ -163,18 +170,37 @@ with open('projects.tex', 'w') as texfile:
 			else:
 				texfile.write('& %.0fs ' % ( t2 ) )
 		else:
-			texfile.write('& fail '  )
+			texfile.write('& fail & fail')
 		
-		'''
+		
 		if flag3:
-			if t3 <= menor:
-				texfile.write('& \\textbf{%.5f} ' % ( t3 ) )
-			else:
-				texfile.write('& %.5f ' % ( t3 ) )
-		else:
-			texfile.write('& fail '  )
+			texfile.write('& %d' % ( r3 ) )
 		
-		'''
+			if t3 >= 3600:
+				texfile.write('& 3600s')
+			elif t3 <= 100:
+				texfile.write('& %.2fs ' % ( t3 ) )
+			else:
+				texfile.write('& %.0fs ' % ( t3 ) )
+		else:
+			texfile.write('& fail & fail')
+
+
+		if flag4:
+			if t4 < 3600:
+				texfile.write('& %d*' % ( r4 ) )
+			else:
+				texfile.write('& %d' % ( r4 ) )
+		
+			if t4 >= 3600:
+				texfile.write('& 3600s')
+			elif t4 <= 100:
+				texfile.write('& %.2fs ' % ( t4 ) )
+			else:
+				texfile.write('& %.0fs ' % ( t4 ) )
+		else:
+			texfile.write('& fail & fail')
+		
 		texfile.write('\\\\\n')
 				
 
