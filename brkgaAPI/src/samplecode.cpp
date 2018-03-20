@@ -3,14 +3,23 @@
 #include "MTRand.h"
 #include "BRKGA.h"
 #include <vector>
+#include <time.h>
 
 using namespace std;
+
+int timeout;
+double elapsed;
+double lastElapsed;
+clock_t clk;
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {
     cout << "Usage: ./samplecode filename" << endl;
     return 1;
   }
+
+	clk = clock();
+	timeout = 3600;
 
 	SampleDecoder decoder = SampleDecoder(argv[1]);			// initialize the decoder
 
@@ -43,10 +52,11 @@ int main(int argc, char* argv[]) {
 		cout << algorithm.getBestFitness()*-1 << endl;
 	} while (generation < MAX_GENS);
 
-	std::cout << "Best solution found has objective value = "
-	 		<< algorithm.getBestFitness()*-1 << std::endl;
-
 	decoder.genFileSol(algorithm.getBestChromosome());
+
+	elapsed = ((double) (clock() - clk)) / CLOCKS_PER_SEC;
+  cout << "Record: " << algorithm.getBestFitness()*-1 << endl;
+  cout << fixed << "Time " << elapsed << endl;
 
 	return 0;
 }

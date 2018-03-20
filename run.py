@@ -55,10 +55,10 @@ for inst in instances:
 	print ("brkga %s" % (inst))
 	os.system("./brkgaAPI/src/samplecode instances/%s > out/brkga/%s.out" % (inst, inst))
 
-	print ("BB %s" % (inst))
-	os.system("./BB/main instances/%s > out/bb/%s.out" % (inst, inst))
+	#print ("BB %s" % (inst))
+	#os.system("./BB/main instances/%s > out/bb/%s.out" % (inst, inst))
 
-	print ("BB-brkga %s" % (inst))
-	os.system("./BB2/main instances/%s brkgaAPI/solutions/%s > out/bb_brkga/%s.out" % (inst, inst, inst))
+	#print ("BB-brkga %s" % (inst))
+	#os.system("./BB2/main instances/%s brkgaAPI/solutions/%s > out/bb_brkga/%s.out" % (inst, inst, inst))
 
 	print("")
