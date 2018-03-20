@@ -205,7 +205,8 @@ with open('projects.tex', 'w') as texfile:
 				
 
 
-	texfile.write('\\hline\\\\ \n')		  	
+	texfile.write('\\hline\\\\ \n')
+	texfile.write('\\text{* Optimal solution}\\\\\n')	  	
 	texfile.write('\\caption{Tests results}\\\\ \n')		
 	texfile.write('\\end{longtable}\n')
 	texfile.write('\\end{scriptsize}\n') 
