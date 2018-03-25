@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int c = 3;
+int c;
 vector< vector<int> > m;
 vector<int> sets;
 
@@ -217,11 +217,18 @@ int main(int argsc, char* argsv[]){
     }
 
     //03
-    for(int i = 0; i < c; i++){
-        for(int j = i+1; j < c; j++){
-            if(m[i][j] != 0) continue;
-            model.addConstr(X[i] + X[j] <= 1, "c3");
+    int k = 0;
+    int s = sets.size();
+    for(int i = 0; i < s; i++){
+
+    
+        GRBLinExpr expr1 = 0.0;
+
+        for(int j = 0; j < sets[i]; j++, k++){
+            expr1 += X[k];
         }
+
+        model.addConstr(expr1 == 1, "c3-s-");
     }
 
     model.setObjective(expr, GRB_MAXIMIZE);
