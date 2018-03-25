@@ -222,7 +222,7 @@ int main(int argsc, char* argsv[]){
     for(int i = 0; i < s; i++){
 
     
-        GRBLinExpr expr1 = 0.0;
+        GRBLinExpr expr1;
 
         for(int j = 0; j < sets[i]; j++, k++){
             expr1 += X[k];
