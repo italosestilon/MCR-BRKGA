@@ -44,11 +44,16 @@
 #ifndef BRKGA_H
 #define BRKGA_H
 
+#define _OPENMP
+
 #include <omp.h>
 #include <algorithm>
 #include <exception>
 #include <stdexcept>
 #include "Population.h"
+#include <iostream>
+
+using namespace std;
 
 template< class Decoder, class RNG >
 class BRKGA {

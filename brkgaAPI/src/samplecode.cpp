@@ -25,9 +25,9 @@ int main(int argc, char* argv[]) {
 
 	const unsigned n = decoder.ins.N; // size of chromosomes
 	const unsigned p = 1000;	// size of population
-	const double pe = 0.20;		// fraction of population to be the elite-set
-	const double pm = 0.10;		// fraction of population to be replaced by mutants
-	const double rhoe = 0.70;	// probability that offspring inherit an allele from elite parent
+	const double pe = 0.16;		// fraction of population to be the elite-set
+	const double pm = 0.08;		// fraction of population to be replaced by mutants
+	const double rhoe = 0.55;	// probability that offspring inherit an allele from elite parent
 	const unsigned K = 3;		// number of independent populations
 	const unsigned MAXT = 16;	// number of threads for parallel decoding
 
@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
 	unsigned generation = 0;		// current generation
 	const unsigned X_INTVL = 100;	// exchange best individuals at every 100 generations
 	const unsigned X_NUMBER = 2;	// exchange top 2 best
-	const unsigned MAX_GENS = 100;	// run for 1000 gens
+	const unsigned MAX_GENS = 300;	// run for 1000 gens
 	do {
 	  std::cout << "Generation " << generation+1 << " of " << MAX_GENS << "\n";
 		algorithm.evolve();	// evolve the population for one generation
