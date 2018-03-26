@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 	const unsigned p = 1000;	// size of population
 	const double pe = 0.16;		// fraction of population to be the elite-set
 	const double pm = 0.08;		// fraction of population to be replaced by mutants
-	const double rhoe = 0.55;	// probability that offspring inherit an allele from elite parent
+	const double rhoe = 0.65;	// probability that offspring inherit an allele from elite parent
 	const unsigned K = 3;		// number of independent populations
 	const unsigned MAXT = 16;	// number of threads for parallel decoding
 
