@@ -1,7 +1,7 @@
 import pickle
 
 instancias = [
-	
+
 	("instance-normal-5_10_1556037329065896909.txt", 5, 10, "normal"),
 	("instance-normal-5_30_3915474638750880997.txt", 5, 30, "normal"),
 	("instance-normal-5_50_5645167529901746724.txt", 5, 50, "normal"),
@@ -28,7 +28,7 @@ instancias = [
 	("instance-similar-30_50_1331763098226818453.txt", 30, 50, "similar"),
 	("instance-uniform-5_10_8918558323521365203.txt", 5, 10, "uniform"),
 	("instance-uniform-5_30_5316484456983232856.txt", 5, 30, "uniform"),
-	("instance-uniform-5_50_3454365547511170571.txt", 5, 50, "uniform"), 
+	("instance-uniform-5_50_3454365547511170571.txt", 5, 50, "uniform"),
 	("instance-uniform-10_10_186296902021270023.txt", 10, 10, "uniform"),
 	("instance-uniform-10_30_996401170637413420.txt", 10, 30, "uniform"),
 	("instance-uniform-10_50_6620044706615721902.txt", 10, 50, "uniform"),
@@ -46,22 +46,22 @@ with open('projects.tex', 'w') as texfile:
 	texfile.write('\\begin{scriptsize}\n')
 	texfile.write('\\setlength\\LTleft{0pt}            % default: \\fill\n')
 	texfile.write('\\setlength\\LTright{0pt}           % default: \\fill\n')
-	texfile.write('\\label{table:tests}\n')		
+	texfile.write('\\label{table:tests}\n')
 	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}l|l|l|ll|ll|lll@{}}\n')
-	
-			
+
+
 	texfile.write('\\hline\n')
-	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{brkga} & & & \\textbf{PLI}\\\\ \n')
+	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{BRKGA} & & & \\textbf{PLI}\\\\ \n')
 	texfile.write('\\hline\n')
 
-	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
+	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time
 	texfile.write('\\hline\n')
 	texfile.write('\\endfirsthead\n')
 
 	texfile.write('\\hline\n')
-	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{brkga} & & & \\textbf{PLI}\\\\ \n') #& brkga & PLI
+	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{BRKGA} & & & \\textbf{PLI}\\\\ \n') #& brkga & PLI
 	texfile.write('\\hline\n')
-	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time	
+	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time
 	texfile.write('\\hline\n')
 	texfile.write('\\endhead\n')
 	texfile.write('\\hline \multicolumn{10}{r}{{Continue next page...}} \\\\ \n')
@@ -70,69 +70,69 @@ with open('projects.tex', 'w') as texfile:
 	texfile.write('\\endlastfoot\n')
 
 	for inst in instancias:
-		
+
 		#texfile.write(' %s ' % ( inst ) )
-		
+
 		texfile.write(' %d & %d & %s' % (inst[1], inst[2], inst[3]))
-		
+
 		flag1 = True
-		
+
 		menor = 3600
-		
+
 		try:
 			filename = "out/bb/%s.out" % (inst[0])
 			f = open(filename)
-			lines = f.readlines();				
+			lines = f.readlines();
 			r1   = int(lines[len(lines)-4].split(" ")[1])
 			t1   = float(lines[len(lines)-2].split(" ")[1])
-			sub1 = int(lines[len(lines)-3].split(" ")[1])	
+			sub1 = int(lines[len(lines)-3].split(" ")[1])
 		except:
 			flag1 = False
-		
-		
+
+
 		if flag1:
 			if t1 < menor:
 				menor  = t1
-		
+
 		flag2 = True
-		
+
 		'''
 		try:
 			filename = "out/bb_brkga/%s.out" % (inst[0])
 			f = open(filename)
-			lines = f.readlines();				
+			lines = f.readlines();
 			r2   = int(lines[len(lines)-4].split(" ")[1])
 			t2   = float(lines[len(lines)-2].split(" ")[1])
 			sub2 = int(lines[len(lines)-3].split(" ")[1])
 		except:
 			flag2 = False
-		
+
 		if flag2:
 			if t2 < menor:
 				menor  = t2
 		'''
-		
-		
+
+
 		flag3 = True
-		
+
 		try:
 			filename = "out/brkga/%s.out" % (inst[0])
 			f = open(filename)
-			lines = f.readlines();				
+			lines = f.readlines();
 			r3   = int(lines[len(lines)-2].split(" ")[1])
-			t3   = float(lines[len(lines)-1].split(" ")[1])	
+			t3   = float(lines[len(lines)-1].split(" ")[1])
 		except:
 			flag3 = False
-		
+
 		razao1 = menor
-	
+
 
 		flag4 = True
-		
+
 		try:
 			filename = "integer_programming/result/%s" % (inst[0])
 			f = open(filename)
-			lines = f.readlines();				
+			lines = f.readlines();
 			r4   = int(lines[0])
 			filename = "integer_programming/time/%s" % (inst[0])
 			f = open(filename)
@@ -144,12 +144,12 @@ with open('projects.tex', 'w') as texfile:
 			g4 = float(lines[0])
 		except:
 			flag4 = False
-		
+
 		razao1 = menor
 
 		if flag1:
 			if t1 < 3600:
-				texfile.write('& %d*' % ( r1 ) )
+				texfile.write('& \\textbf{%d*}' % ( r1 ) )
 			else:
 				texfile.write('& %d' % ( r1 ) )
 
@@ -177,10 +177,14 @@ with open('projects.tex', 'w') as texfile:
 		else:
 			texfile.write('& fail & fail')
 		'''
-		
+
 		if flag3:
-			texfile.write('& %d' % ( r3 ) )
-		
+			if r3 >= r1:
+				texfile.write('& \\textbf{%d}' % ( r3 ))
+			else:
+				texfile.write('& %d' % ( r3 ) )
+
+
 			if t3 >= 3600:
 				texfile.write('& 3600s')
 			elif t3 <= 100:
@@ -193,10 +197,12 @@ with open('projects.tex', 'w') as texfile:
 
 		if flag4:
 			if t4 < 3600:
-				texfile.write('& %d*' % ( r4 ) )
+				texfile.write('& \\textbf{%d*}' % ( r4 ) )
+			elif r4 >= r1 and r4 >= r3:
+				texfile.write('& \\textbf{%d}' % ( r4 ) )
 			else:
 				texfile.write('& %d' % ( r4 ) )
-		
+
 			if t4 >= 3600:
 				texfile.write('& 3600s')
 			elif t4 <= 100:
@@ -212,12 +218,12 @@ with open('projects.tex', 'w') as texfile:
 				texfile.write('& %d ' % ( g4 ) )
 		else:
 			texfile.write('& fail & fail')
-		
+
 		texfile.write('\\\\\n')
-				
 
 
-	texfile.write('\\hline \n')	  	
-	texfile.write('\\caption{Tests results}\\\\ \n')		
+
+	texfile.write('\\hline \n')
+	texfile.write('\\caption{Tests results}\\\\ \n')
 	texfile.write('\\end{longtable}\n')
-	texfile.write('\\end{scriptsize}\n') 
+	texfile.write('\\end{scriptsize}\n')
