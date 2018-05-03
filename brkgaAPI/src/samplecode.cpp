@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 	double totalTime = 0;
 	double totalV = 0;
 
-	int c = 100;
+	int c = 1000;
 
 	SampleDecoder decoder = SampleDecoder(argv[1]);			// initialize the decoder
 
@@ -67,8 +67,8 @@ int main(int argc, char* argv[]) {
 	//decoder.genFileSol(algorithm.getBestChromosome());
 
 
-  cout << "Record: " << totalV/100.0 << endl;
-  cout << fixed << "Time " << totalTime/100.0 << endl;
+  cout << "Record: " << totalV/1000.0 << endl;
+  cout << fixed << "Time " << totalTime/1000.0 << endl;
 
 	return 0;
 }

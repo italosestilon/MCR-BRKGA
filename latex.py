@@ -1,4 +1,5 @@
 import pickle
+import math
 
 instancias = [
 
@@ -47,21 +48,21 @@ with open('projects.tex', 'w') as texfile:
 	texfile.write('\\setlength\\LTleft{0pt}            % default: \\fill\n')
 	texfile.write('\\setlength\\LTright{0pt}           % default: \\fill\n')
 	texfile.write('\\label{table:tests}\n')
-	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}l|l|l|ll|ll|lll@{}}\n')
+	texfile.write('\\begin{longtable}{@{\\extracolsep{\\fill}}l|l|l|ll|lll|lll@{}}\n')
 
 
 	texfile.write('\\hline\n')
-	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{BRKGA} & & & \\textbf{PLI}\\\\ \n')
+	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{BRKGA} & & & \\textbf{ILP}\\\\ \n')
 	texfile.write('\\hline\n')
 
-	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time
+	texfile.write('& & & incubent & time & incubent & variance & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time
 	texfile.write('\\hline\n')
 	texfile.write('\\endfirsthead\n')
 
 	texfile.write('\\hline\n')
-	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{BRKGA} & & & \\textbf{PLI}\\\\ \n') #& brkga & PLI
+	texfile.write('\\textbf{K} & \\textbf{Max set size} & \\textbf{Type} & \\textbf{BB} & & \\textbf{BRKGA} & & & \\textbf{ILP}\\\\ \n') #& brkga & PLI
 	texfile.write('\\hline\n')
-	texfile.write('& & & incubent & time & incubent & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time
+	texfile.write('& & & incubent & time & incubent & variance & time & incubent & time & gap \\%\\\\ \n'); #& $incubent$ & time & $incubent$ & time
 	texfile.write('\\hline\n')
 	texfile.write('\\endhead\n')
 	texfile.write('\\hline \multicolumn{10}{r}{{Continue next page...}} \\\\ \n')
@@ -119,8 +120,15 @@ with open('projects.tex', 'w') as texfile:
 			filename = "out/brkga/%s.out" % (inst[0])
 			f = open(filename)
 			lines = f.readlines();
-			r3   = int(float(lines[len(lines)-2].split(" ")[1]))
+			r3   = int(math.ceil(float(lines[len(lines)-2].split(" ")[1])))
 			t3   = float(lines[len(lines)-1].split(" ")[1])
+			var = 0
+			for i in range(0, len(lines) - 2):
+				xi = int(lines[i])
+				var += (xi - r3)**2
+
+			v3 = var/((len(lines)-2) * 1.0)
+					
 		except Exception as e: 
 			print(e)
 			flag3 = False
@@ -184,6 +192,8 @@ with open('projects.tex', 'w') as texfile:
 				texfile.write('& \\textbf{%d}' % ( r3 ))
 			else:
 				texfile.write('& %d' % ( r3 ) )
+
+			texfile.write('& %.2f' % ( v3 ) )
 
 
 			if t3 >= 3600:
