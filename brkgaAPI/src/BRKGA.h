@@ -44,8 +44,6 @@
 #ifndef BRKGA_H
 #define BRKGA_H
 
-#define _OPENMP
-
 #include <omp.h>
 #include <algorithm>
 #include <exception>
@@ -158,6 +156,11 @@ BRKGA< Decoder, RNG >::BRKGA(unsigned _n, unsigned _p, double _pe, double _pm, d
 		refRNG(rng), refDecoder(decoder), K(_K), MAX_THREADS(MAX),
 		previous(K, 0), current(K, 0) {
 
+
+	#ifdef _OPENMP
+		#pragma omp parallel num_threads(MAX_THREADS)
+	#endif
+
 	// Error check:
 	using std::range_error;
 	if(n == 0) { throw range_error("Chromosome size equals zero."); }
@@ -265,7 +268,7 @@ inline void BRKGA< Decoder, RNG >::initialize(const unsigned i) {
 
 	// Decode:
 	#ifdef _OPENMP
-		#pragma omp parallel for num_threads(MAX_THREADS)
+		#pragma omp parallel for
 	#endif
 	for(int j = 0; j < int(p); ++j) {
 		current[i]->setFitness(j, refDecoder.decode((*current[i])(j)) );
@@ -319,7 +322,7 @@ inline void BRKGA< Decoder, RNG >::evolution(Population& curr, Population& next)
 
 	// Time to compute fitness, in parallel:
 	#ifdef _OPENMP
-		#pragma omp parallel for num_threads(MAX_THREADS)
+		#pragma omp parallel for
 	#endif
 	for(int i = int(pe); i < int(p); ++i) {
 		next.setFitness( i, refDecoder.decode(next.population[i]) );

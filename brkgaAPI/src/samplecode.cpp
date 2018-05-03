@@ -14,12 +14,15 @@ clock_t clk;
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {
-    cout << "Usage: ./samplecode filename" << endl;
-    return 1;
-  }
+	   cout << "Usage: ./samplecode filename" << endl;
+	   return 1;
+	}
 
-	clk = clock();
 	timeout = 3600;
+	double totalTime = 0;
+	double totalV = 0;
+
+	int c = 100;
 
 	SampleDecoder decoder = SampleDecoder(argv[1]);			// initialize the decoder
 
@@ -29,34 +32,41 @@ int main(int argc, char* argv[]) {
 	const double pm = 0.08;		// fraction of population to be replaced by mutants
 	const double rhoe = 0.65;	// probability that offspring inherit an allele from elite parent
 	const unsigned K = 3;		// number of independent populations
-	const unsigned MAXT = 16;	// number of threads for parallel decoding
+	const unsigned MAXT = 3;	// number of threads for parallel decoding
 
 	const long unsigned rngSeed = 0;	// seed to the random number generator
 	MTRand rng(rngSeed);	// initialize the random number generator
 
 	// initialize the BRKGA-based heuristic
 	BRKGA< SampleDecoder, MTRand > algorithm(n, p, pe, pm, rhoe, decoder, rng, K, MAXT);
-
 	unsigned generation = 0;		// current generation
 	const unsigned X_INTVL = 100;	// exchange best individuals at every 100 generations
 	const unsigned X_NUMBER = 2;	// exchange top 2 best
 	const unsigned MAX_GENS = 300;	// run for 1000 gens
-	do {
-	  std::cout << "Generation " << generation+1 << " of " << MAX_GENS << "\n";
-		algorithm.evolve();	// evolve the population for one generation
 
-		if((++generation) % X_INTVL == 0) {
-			algorithm.exchangeElite(X_NUMBER);	// exchange top individuals
-		}
+	while(c--){
+		clk = clock();
+		do {
+		  //std::cout << "Generation " << generation+1 << " of " << MAX_GENS << "\n";
+			algorithm.evolve();	// evolve the population for one generation
 
-		cout << algorithm.getBestFitness()*-1 << endl;
-	} while (generation < MAX_GENS);
+			if((++generation) % X_INTVL == 0) {
+				algorithm.exchangeElite(X_NUMBER);	// exchange top individuals
+			}
 
-	decoder.genFileSol(algorithm.getBestChromosome());
+			cout << algorithm.getBestFitness()*-1 << endl;
+		} while (generation < MAX_GENS);
 
-	elapsed = ((double) (clock() - clk)) / CLOCKS_PER_SEC;
-  cout << "Record: " << algorithm.getBestFitness()*-1 << endl;
-  cout << fixed << "Time " << elapsed << endl;
+		elapsed = ((double) (clock() - clk)) / CLOCKS_PER_SEC;
+
+		totalTime += elapsed;
+		totalV += algorithm.getBestFitness()*-1;
+	}
+	//decoder.genFileSol(algorithm.getBestChromosome());
+
+	
+  	cout << "Record: " << totalV/100.0 << endl;
+  	cout << fixed << "Time " << totalTime/100.0 << endl;
 
 	return 0;
 }

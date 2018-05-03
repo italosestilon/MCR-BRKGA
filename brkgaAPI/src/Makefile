@@ -2,7 +2,7 @@
 CPP= g++
 #CFLAGS= -O3 -fopenmp
 CPATH = ""
-CFLAGS= -O3
+CFLAGS= -O3 -fopenmp
 OBJECTS= SampleDecoder.o samplecode.o
 CCFLAGS = -O3 $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR) $(SYSTEMCCFLAGS) -fopenmp
 
