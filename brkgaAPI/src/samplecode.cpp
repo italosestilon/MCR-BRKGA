@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
 		unsigned generation = 0;		// current generation
 		const unsigned X_INTVL = 100;	// exchange best individuals at every 100 generations
 		const unsigned X_NUMBER = 2;	// excichange top 2 best
-		const unsigned MAX_GENS = 500;	// run for 1000 gens
+		const unsigned MAX_GENS = 1000;	// run for 1000 gens
 
 		clk = clock();
 		do {
