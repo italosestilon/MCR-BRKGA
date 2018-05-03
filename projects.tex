@@ -4,13 +4,13 @@
 \label{table:tests}
 \begin{longtable}{@{\extracolsep{\fill}}l|l|l|ll|ll|lll@{}}
 \hline
-\textbf{K} & \textbf{Max set size} & \textbf{Type} & \textbf{BB} & & \textbf{brkga} & & & \textbf{PLI}\\ 
+\textbf{K} & \textbf{Max set size} & \textbf{Type} & \textbf{BB} & & \textbf{BRKGA} & & & \textbf{PLI}\\ 
 \hline
 & & & incubent & time & incubent & time & incubent & time & gap \%\\ 
 \hline
 \endfirsthead
 \hline
-\textbf{K} & \textbf{Max set size} & \textbf{Type} & \textbf{BB} & & \textbf{brkga} & & & \textbf{PLI}\\ 
+\textbf{K} & \textbf{Max set size} & \textbf{Type} & \textbf{BB} & & \textbf{BRKGA} & & & \textbf{PLI}\\ 
 \hline
 & & & incubent & time & incubent & time & incubent & time & gap \%\\ 
 \hline
@@ -19,42 +19,42 @@
 \endfoot
 \multicolumn{10}{r}{{}} \\ 
 \endlastfoot
- 5 & 10 & normal& \textbf{1026*}& 0.00s& \textbf{1026}& 0.60s & \textbf{1026*}& 0.45s & 0.00 \\
- 5 & 30 & normal& \textbf{1033*}& 0.02s& \textbf{1033}& 1.38s & \textbf{1033}& 3600s& 182 \\
- 5 & 50 & normal& \textbf{1028*}& 0.02s& \textbf{1028}& 1.83s & \textbf{1028}& 3600s& 687 \\
- 10 & 10 & normal& \textbf{4567*}& 0.05s& \textbf{4567}& 0.76s & \textbf{4567*}& 324s & 0.00 \\
- 10 & 30 & normal& \textbf{4589*}& 334s & 4586& 2.09s & 4567& 3600s& 835 \\
- 10 & 50 & normal& 4593& 3600s& \textbf{4593}& 2.66s & 4568& 3600s& 1427 \\
- 20 & 10 & normal& \textbf{19171*}& 2120s & \textbf{19171}& 1.38s & 19149& 3600s& 5.99 \\
- 20 & 30 & normal& 19161& 3600s& \textbf{19234}& 5.35s & 19143& 3600s& 975 \\
- 20 & 50 & normal& 19175& 3600s& \textbf{19261}& 8.37s & 19097& 3600s& 1492 \\
- 30 & 10 & normal& 43722& 3600s& \textbf{43829}& 2.40s & 43711& 3600s& 212 \\
- 30 & 30 & normal& 43746& 3600s& \textbf{43937}& 8.15s & 43672& 3600s& 1022 \\
- 30 & 50 & normal& 43743& 3600s& \textbf{43978}& 12.97s & 43625& 3600s& 1709 \\
- 5 & 10 & similar& \textbf{441*}& 0.00s& \textbf{441}& 0.70s & \textbf{441*}& 14.63s & 0.00 \\
- 5 & 30 & similar& \textbf{465*}& 0.03s& 458& 1.80s & 449& 3600s& 981 \\
- 5 & 50 & similar& \textbf{478*}& 0.06s& 450& 2.83s & 459& 3600s& 2544 \\
- 10 & 10 & similar& \textbf{1737*}& 8.84s& \textbf{1737}& 1.32s & 1719& 3600s& 185 \\
- 10 & 30 & similar& 1834& 3600s& 1758& 4.75s & 1562& 3600s& 2035 \\
- 10 & 50 & similar& 1852& 3600s& 1801& 7.72s & 1604& 3600s& 3448 \\
- 20 & 10 & similar& 6223& 3600s& \textbf{6589}& 2.54s & 5750& 3600s& 692 \\
- 20 & 30 & similar& 6232& 3600s& \textbf{6898}& 9.53s & 5719& 3600s& 2439 \\
- 20 & 50 & similar& 5982& 3600s& \textbf{6895}& 15.61s & 4839& 3600s& 250271 \\
- 30 & 10 & similar& 13303& 3600s& \textbf{14209}& 5.16s & 12304& 3600s& 780 \\
- 30 & 30 & similar& 12896& 3600s& \textbf{14627}& 14.47s & 10812& 3600s& 92368 \\
- 30 & 50 & similar& 12494& 3600s& \textbf{14879}& 23.79s & 11136& 3600s& 248998 \\
- 5 & 10 & uniform& \textbf{766*}& 0.00s& \textbf{766}& 0.52s & \textbf{766*}& 0.19s & 0.00 \\
- 5 & 30 & uniform& \textbf{898*}& 0.01s& \textbf{898}& 1.07s & \textbf{898*}& 211s & 0.00 \\
- 5 & 50 & uniform& \textbf{925*}& 0.03s& \textbf{925}& 1.59s & 903& 3600s& 247 \\
- 10 & 10 & uniform& \textbf{3135*}& 0.07s& \textbf{3135}& 0.72s & \textbf{3135*}& 27.00s & 0.00 \\
- 10 & 30 & uniform& \textbf{3522*}& 1112s & 3463& 2.30s & 3188& 3600s& 806 \\
- 10 & 50 & uniform& \textbf{3413*}& 20.38s& \textbf{3413}& 2.51s & 3358& 3600s& 537 \\
- 20 & 10 & uniform& 12173& 3600s& \textbf{12317}& 1.58s & 11932& 3600s& 78.50 \\
- 20 & 30 & uniform& 11677& 3600s& \textbf{12442}& 2.85s & 11458& 3600s& 443 \\
- 20 & 50 & uniform& 11866& 3600s& \textbf{13411}& 7.50s & 11331& 3600s& 1178 \\
- 30 & 10 & uniform& 25139& 3600s& \textbf{26242}& 2.13s & 25081& 3600s& 102 \\
- 30 & 30 & uniform& 24965& 3600s& \textbf{27986}& 7.72s & 23512& 3600s& 860 \\
- 30 & 50 & uniform& 25569& 3600s& \textbf{28861}& 12.17s & 22265& 3600s& 61946 \\
+ 5 & 10 & normal& \textbf{1026*}& 0.00s& \textbf{1026}& 0.18s & \textbf{1026*}& 0.45s & 0.00 \\
+ 5 & 30 & normal& \textbf{1033*}& 0.02s& \textbf{1033}& 0.49s & \textbf{1033}& 3600s& 182 \\
+ 5 & 50 & normal& \textbf{1028*}& 0.02s& \textbf{1028}& 0.65s & \textbf{1028}& 3600s& 687 \\
+ 10 & 10 & normal& \textbf{4567*}& 0.05s& \textbf{4567}& 0.26s & \textbf{4567*}& 324s & 0.00 \\
+ 10 & 30 & normal& \textbf{4589*}& 334s & 4586& 0.72s & 4567& 3600s& 835 \\
+ 10 & 50 & normal& 4593& 3600s& \textbf{4593}& 0.92s & 4568& 3600s& 1427 \\
+ 20 & 10 & normal& \textbf{19171*}& 2120s & \textbf{19171}& 0.44s & 19149& 3600s& 5.99 \\
+ 20 & 30 & normal& 19161& 3600s& \textbf{19234}& 1.65s & 19143& 3600s& 975 \\
+ 20 & 50 & normal& 19175& 3600s& \textbf{19261}& 2.64s & 19097& 3600s& 1492 \\
+ 30 & 10 & normal& 43722& 3600s& \textbf{43829}& 0.75s & 43711& 3600s& 212 \\
+ 30 & 30 & normal& 43746& 3600s& \textbf{43937}& 2.47s & 43672& 3600s& 1022 \\
+ 30 & 50 & normal& 43743& 3600s& \textbf{43978}& 4.03s & 43625& 3600s& 1709 \\
+ 5 & 10 & similar& \textbf{441*}& 0.00s& \textbf{441}& 0.25s & \textbf{441*}& 14.63s & 0.00 \\
+ 5 & 30 & similar& \textbf{465*}& 0.03s& 458& 0.63s & 449& 3600s& 981 \\
+ 5 & 50 & similar& \textbf{478*}& 0.06s& 450& 1.02s & 459& 3600s& 2544 \\
+ 10 & 10 & similar& \textbf{1737*}& 8.84s& \textbf{1737}& 0.45s & 1719& 3600s& 185 \\
+ 10 & 30 & similar& 1834& 3600s& 1789& 1.52s & 1562& 3600s& 2035 \\
+ 10 & 50 & similar& 1852& 3600s& 1801& 2.49s & 1604& 3600s& 3448 \\
+ 20 & 10 & similar& 6223& 3600s& \textbf{6589}& 0.83s & 5750& 3600s& 692 \\
+ 20 & 30 & similar& 6232& 3600s& \textbf{6922}& 3.00s & 5719& 3600s& 2439 \\
+ 20 & 50 & similar& 5982& 3600s& \textbf{6924}& 4.52s & 4839& 3600s& 250271 \\
+ 30 & 10 & similar& 13303& 3600s& \textbf{14209}& 1.52s & 12304& 3600s& 780 \\
+ 30 & 30 & similar& 12896& 3600s& \textbf{14666}& 4.45s & 10812& 3600s& 92368 \\
+ 30 & 50 & similar& 12494& 3600s& \textbf{14899}& 5.26s & 11136& 3600s& 248998 \\
+ 5 & 10 & uniform& \textbf{766*}& 0.00s& \textbf{766}& 0.16s & \textbf{766*}& 0.19s & 0.00 \\
+ 5 & 30 & uniform& \textbf{898*}& 0.01s& \textbf{898}& 0.37s & \textbf{898*}& 211s & 0.00 \\
+ 5 & 50 & uniform& \textbf{925*}& 0.03s& \textbf{925}& 0.56s & 903& 3600s& 247 \\
+ 10 & 10 & uniform& \textbf{3135*}& 0.07s& \textbf{3135}& 0.24s & \textbf{3135*}& 27.00s & 0.00 \\
+ 10 & 30 & uniform& \textbf{3522*}& 1112s & 3463& 0.80s & 3188& 3600s& 806 \\
+ 10 & 50 & uniform& \textbf{3413*}& 20.38s& \textbf{3413}& 0.88s & 3358& 3600s& 537 \\
+ 20 & 10 & uniform& 12173& 3600s& \textbf{12317}& 0.51s & 11932& 3600s& 78.50 \\
+ 20 & 30 & uniform& 11677& 3600s& \textbf{12442}& 0.96s & 11458& 3600s& 443 \\
+ 20 & 50 & uniform& 11866& 3600s& \textbf{13411}& 2.36s & 11331& 3600s& 1178 \\
+ 30 & 10 & uniform& 25139& 3600s& \textbf{26242}& 0.67s & 25081& 3600s& 102 \\
+ 30 & 30 & uniform& 24965& 3600s& \textbf{27986}& 2.34s & 23512& 3600s& 860 \\
+ 30 & 50 & uniform& 25569& 3600s& \textbf{28863}& 3.78s & 22265& 3600s& 61946 \\
 \hline 
 \caption{Tests results}\\ 
 \end{longtable}

@@ -119,9 +119,10 @@ with open('projects.tex', 'w') as texfile:
 			filename = "out/brkga/%s.out" % (inst[0])
 			f = open(filename)
 			lines = f.readlines();
-			r3   = int(lines[len(lines)-2].split(" ")[1])
+			r3   = int(float(lines[len(lines)-2].split(" ")[1]))
 			t3   = float(lines[len(lines)-1].split(" ")[1])
-		except:
+		except Exception as e: 
+			print(e)
 			flag3 = False
 
 		razao1 = menor
